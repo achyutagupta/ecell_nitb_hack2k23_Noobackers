@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="col-lg-6 d-flex flex-column content-right">
+        <div class="container my-auto py-5">
+            <div class="row">
+                <div class="col-lg-9 col-xl-7 mx-auto">
+                    <h4 class="mb-3">Login</h4>
+                    <div class="form-group">
+                        <label for="email_address">Email Address</label>
+                        <input type="email" name="email_address" id="login_email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="login_password" class="form-control">
+                    </div>
+                    <!-- <div class="clearfix mb-3">
+                            <div class="float-start">
+                                <label class="container_check">Remember Me
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="float-end">
+                                <a id="forgot" href="javascript:void(0);">Forgot Password?</a>
+                            </div>
+                        </div> -->
+                    <button class="btn_1 full-width" id="login_btn">Login</button>
+                    <!-- <p class="text-center mt-3 mb-0">Don't have an account? <a href="signup.html">Sign Up</a></p> -->
+                    <!-- <form class="input_style_1" method="post">
+                        <div id="forgot_pw">
+                            <h4 class="mb-3">Forgot Password</h4>
+                            <div class="form-group">
+                                <label for="email_forgot">Login email</label>
+                                <input type="email" class="form-control" name="email_forgot" id="email_forgot">
+                            </div>
+                            <p>You will receive an email containing a link allowing you to reset your password to a new preferred one.</p>
+                            <div class="text-center"><input type="submit" value="Reset Password" class="btn_1"></div>
+                        </div>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBHJRnu1ztE5RAyrJhZlGsw98ClTp1eX3Y",
+        authDomain: "student-portal-466eb.firebaseapp.com",
+        projectId: "student-portal-466eb",
+        storageBucket: "student-portal-466eb.appspot.com",
+        messagingSenderId: "466108318598",
+        appId: "1:466108318598:web:173aa80a11b1fa258da207"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+
+    document.getElementById("login_btn").addEventListener('click', function () {
+
+        const login_email = document.getElementById("login_email").value;
+        const login_password = document.getElementById("login_password").value;
+
+
+        signInWithEmailAndPassword(auth, login_email, login_password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // window.location.pathname = "/profile1.html";
+                alert("Login Successfull");
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert("Error");
+            });
+
+    });
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,54 @@
+[debug] [2023-02-10T20:06:34.170Z] ----------------------------------------------------------------------
+[debug] [2023-02-10T20:06:34.174Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-02-10T20:06:34.175Z] CLI Version:   11.19.0
+[debug] [2023-02-10T20:06:34.176Z] Platform:      win32
+[debug] [2023-02-10T20:06:34.176Z] Node Version:  v16.15.1
+[debug] [2023-02-10T20:06:34.178Z] Time:          Sat Feb 11 2023 01:36:34 GMT+0530 (India Standard Time)
+[debug] [2023-02-10T20:06:34.179Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-10T20:06:34.194Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-10T20:06:34.194Z] > authorizing via signed-in user (achyutagupta888rg@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Noobackers\Company_portal
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-02-10T20:06:58.870Z] > refreshing access token with scopes: []
+[debug] [2023-02-10T20:06:58.874Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-10T20:06:58.874Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-10T20:06:59.283Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-02-10T20:06:59.283Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-10T20:06:59.299Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-02-10T20:07:00.379Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-02-10T20:07:00.379Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project company-portal-a6962 (Company-portal) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-02-10T20:07:30.647Z] Error: ENOTDIR: not a directory, scandir 'D:\Noobackers\Company_portal\signup_c.html'
+    at Object.readdirSync (node:fs:1405:3)
+    at Object.createFileSync (C:\Users\Pankaj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:55:10)
+    at Config.writeProjectFile (C:\Users\Pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:152:12)
+    at C:\Users\Pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:176:22
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doSetup (C:\Users\Pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:129:13)
+    at async init (C:\Users\Pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: An unexpected error has occurred.
