@@ -14,7 +14,7 @@
         <div class="container my-auto py-5">
             <div class="row">
                 <div class="col-lg-9 col-xl-7 mx-auto">
-                    <h4 class="mb-3">Login</h4>
+                    <h4 class="mb-3">Student Login</h4>
                     <div class="form-group">
                         <label for="email_address">Email Address</label>
                         <input type="email" name="email_address" id="login_email" class="form-control">
@@ -84,8 +84,8 @@
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                // window.location.pathname = "/profile1.html";
-                alert("Login Successfull");
+                window.location.pathname = "Student_portal/portal_s.html";
+                // alert("Login Successfull");
 
             })
             .catch((error) => {
