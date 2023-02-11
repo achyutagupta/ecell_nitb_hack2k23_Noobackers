@@ -1,0 +1,24 @@
+{
+  "name": "ecell_nitb_hack2k23_noobackers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achyutagupta/ecell_nitb_hack2k23_Noobackers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/achyutagupta/ecell_nitb_hack2k23_Noobackers/issues"
+  },
+  "homepage": "https://github.com/achyutagupta/ecell_nitb_hack2k23_Noobackers#readme",
+  "dependencies": {
+    "firebase": "^9.17.1",
+    "install": "^0.13.0"
+  }
+}
