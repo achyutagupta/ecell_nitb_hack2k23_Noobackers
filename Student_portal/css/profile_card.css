@@ -50,14 +50,14 @@
 	 max-width: 700px;
 	 position: relative;
 }
- .profile-card:active .profile-card__cnt {
+ /* .profile-card:active .profile-card__cnt {
 	 filter: blur(6px);
 }
  .profile-card:active .profile-card-message, .profile-card:active .profile-card__overlay {
 	 opacity: 1;
 	 pointer-events: auto;
 	 transition-delay: 0.1s;
-}
+} */
  .profile-card:active .profile-card-form {
 	 transform: none;
 	 transition-delay: 0.1s;
