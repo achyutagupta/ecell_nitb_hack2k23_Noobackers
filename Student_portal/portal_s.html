@@ -419,27 +419,29 @@
                     </form>
                 </div>
             </div>
-            <div class="d-none" id="mentor">
-                <select id="company" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
-                    aria-placeholder="Select Your Dream Company">
-                    <button>show</button>
-                    <option selected>Select Your Dream Company</option>
-                    <option value="1">Amazon</option>
-                    <option value="2">Microsoft</option>
-                    <option value="3">Google</option>
-                </select>
-                <section class="testimonials container-fluid py-5">
+            <div class="d-none container" id="mentor">
+                <div class="text-center pb-2">
+                    <h6 class="text-primary text-uppercase font-weight-bold">
+
+                    </h6>
+                    <h1 class="mb-4">Listen to your mentors</h1>
+                </div>
+                <section class="testimonials container-fluid py-5" style="margin-bottom: 40px;">
                     <div class="container">
-                        <div class="text-center pb-2">
-                            <h6 class="text-primary text-uppercase font-weight-bold">
-                                Testimonial
-                            </h6>
-                            <h1 class="mb-4">Listen to your mentors</h1>
-                        </div>
+                        <select id="company" class="form-select form-select-lg mb-3"
+                            aria-label=".form-select-lg example" aria-placeholder="Select Your Dream Company">
+                            <!-- <button>show</button> -->
+                            <option selected>Select Your Dream Company</option>
+                            <option value="1">Amazon</option>
+                            <option value="2">Microsoft</option>
+                            <option value="3">Google</option>
+                        </select>
+                    </div>
+                    <div class="container">
                         <div class="section-top-border d-none" id="amazon_testimonial">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="profile-card">
+                                    <div class="profile-card" style="margin:100px auto;">
                                         <div class="wrapper">
                                             <div class="profile-card js-profile-card">
                                                 <div class="profile-card__img">
@@ -450,7 +452,8 @@
                                                 <div class="profile-card__cnt js-profile-cnt">
                                                     <div class="profile-card__name">Muhammed Erdem</div>
                                                     <div class="profile-card__txt">Front-end Developer from
-                                                        <strong>Mesopotamia</strong></div>
+                                                        <strong>Mesopotamia</strong>
+                                                    </div>
                                                     <div class="profile-card-loc">
                                                         <span class="profile-card-loc__icon">
                                                             <svg class="icon">
@@ -659,7 +662,7 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <h3 class="mb-30">Block Quotes</h3>
+                                    <h3 class="mb-30">Mentor Say's</h3>
                                     <blockquote class="generic-blockquote">
                                         “I recently finished my internship at Amazon as Data Scientist II (L5). My
                                         internship started on 4th January 2021 and ended on 4th June 2021. I will be
@@ -696,15 +699,85 @@
                                         companies. Apart from that, Amazon also sends some welcome goodies to their
                                         interns.”
                                     </blockquote>
+                                    <style>
+                                        .video-card {
+                                            margin: 15px 0;
+                                        }
+                                    </style>
+                                    <div class="root">
+                                        <div class="container">
+                                            <div class="row" id="video-grid">
 
+                                                <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 grid-item cat-a cat-c">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315"
+                                                                src="https://www.youtube.com/embed/seC9Ss6iC1k"
+                                                                title="YouTube video player" frameborder="0"
+                                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                                allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Complete AWS
+                                                                (AC)</h3>
+                                                            <p class="card-text video-card__card-text">Amazon Web Services for Amazon 
+                                                             </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
+                                                <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 grid-item cat-b cat-c">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Data Structures and Algorithms | College Placement Course | </h3>
+                                                            <p class="card-text video-card__card-text">Complete Data structures and algorithm tutorials.
+                                                              </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 grid-item cat-b">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL-Jc9J83PIiEeD3I4VXETPDmzJ3Z1rWb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Complete Web Developmet Course</h3>
+                                                            <p class="card-text video-card__card-text">
+                                                              
+Hello Everyone,
+We are introducing our full-stack web development course.
+We will be covering both the projects and Interview Questions
+We will be working  on MERN stack with cloud in this course
+                                                                </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 grid-item cat-c">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/8Ob8Hre_SnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Advanced Excel Course
+                                                                </h3>
+                                                            <p class="card-text video-card__card-text">Advanced Excel Full Course 2023 by simplilearn is complete Excel tutorial that helps aspiring data analysts with excel data analytics fundamentlas.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="section-top-border d-none" id="microsoft_testimonial">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="profile-card">
+                                    <div class="profile-card" style="margin:100px auto;">
                                         <div class="wrapper">
                                             <div class="profile-card js-profile-card">
                                                 <div class="profile-card__img">
@@ -715,7 +788,8 @@
                                                 <div class="profile-card__cnt js-profile-cnt">
                                                     <div class="profile-card__name">Muhammed Erdem</div>
                                                     <div class="profile-card__txt">Front-end Developer from
-                                                        <strong>Mesopotamia</strong></div>
+                                                        <strong>Mesopotamia</strong>
+                                                    </div>
                                                     <div class="profile-card-loc">
                                                         <span class="profile-card-loc__icon">
                                                             <svg class="icon">
@@ -924,7 +998,7 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <h3 class="mb-30">Block Quotes</h3>
+                                    <h3 class="mb-30">Mentor Say's</h3>
                                     <blockquote class="generic-blockquote">
                                         “
                                         I learned stuff about software engineering and process and got better at code
@@ -948,6 +1022,73 @@
                                         python, Java or other languages. It’s like they don’t exist. I find this to be
                                         limiting.”
                                     </blockquote>
+                                    <style>
+                                        .video-card {
+                                            margin: 15px 0;
+                                        }
+                                    </style>
+                                    <div class="root">
+                                        <div class="container">
+                                            <div class="row" id="video-grid">
+
+                                                <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 grid-item cat-a cat-c">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLEiEAq2VkUUJfPOj5nRounXvf3n17PCft" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Complete Cyber Security Course
+                                                                (AC)</h3>
+                                                            <p class="card-text video-card__card-text">
+                                                             It includes - what is Cyber Security, how Cyber Security works, Cyber Security certifications, Cyber Security career path, and many more videos which can help you become a master in the Cyber Security domain
+                                                               </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 grid-item cat-b cat-c">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/XlvsJLer_No" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Full Stack Developmet</h3>
+                                                            <p class="card-text video-card__card-text"></p>This application will run on Node.js, Express, and MongoDB. During this course you will learn how the backend works.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-4 grid-item cat-b">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EN4fEbcFZ_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Complete Cloud Computing Course</h3>
+                                                            <p class="card-text video-card__card-text">
+                                                                In this Cloud Computing full course, we'll give you everything you need to know about cloud computing! We'll cover the fundamentals of cloud computing, the cloud computing lifecycle, and important concepts of AWS, Azure, and the Google Cloud Platform.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 grid-item cat-c">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe class="embed-responsive-item"
+                                                                src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                                                                allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Card Title 4
+                                                                (C)</h3>
+                                                            <p class="card-text video-card__card-text">Some quick
+                                                                example text to build on the card
+                                                                title and make up the bulk of the card's content.</p>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -955,7 +1096,7 @@
 
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="profile-card mb-1">
+                                    <div class="profile-card" style="margin:100px auto;">
                                         <div class="wrapper">
                                             <div class="profile-card js-profile-card">
                                                 <div class="profile-card__img">
@@ -966,7 +1107,8 @@
                                                 <div class="profile-card__cnt js-profile-cnt">
                                                     <div class="profile-card__name">Muhammed Erdem</div>
                                                     <div class="profile-card__txt">Front-end Developer from
-                                                        <strong>Mesopotamia</strong></div>
+                                                        <strong>Mesopotamia</strong>
+                                                    </div>
                                                     <div class="profile-card-loc">
                                                         <span class="profile-card-loc__icon">
                                                             <svg class="icon">
@@ -1274,7 +1416,7 @@
                                             Now let us try to connect these pieces together and create a roadmap!
                                             Consider below snapshot of my calendar, a month before interview.</li>
                                     </ul>
-                                    <h3 class="mb-30">Block Quotes</h3>
+                                    <h3 class="mb-30 text-xxl-center">Mentor Say's</h3>
                                     <blockquote class="generic-blockquote">
                                         “Recently, the US Federal government banned online casinos from operating in
                                         America
@@ -1306,72 +1448,81 @@
                                         clarification and start doing
                                         business with me. Listed in this article are the electronic banking”
                                     </blockquote>
+                                    <style>
+                                        .video-card {
+                                            margin: 15px 0;
+                                        }
+                                    </style>
+                                    <div class="root">
+                                        <div class="container">
+                                            <div class="row" id="video-grid">
+
+                                                <div class="col-xs-12 col-sm-6 col-lg-3 col-xl-4 grid-item cat-a cat-c">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLZoTAELRMXVPBTrWtJkn3wWQxZkmTXGwe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Machine Learning Course
+                                                                </h3>
+                                                            <p class="card-text video-card__card-text">In this video I will help you in the complete roadmap to follow to prepare machine learning with all videos and materials  </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-lg-3 col-xl-4 grid-item cat-b cat-c">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLEiEAq2VkUUIjBdiAXdpXOKxFQgSv6z3C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Digital Marketing Course
+                                                                </h3>
+                                                            <p class="card-text video-card__card-text">This course will enable you to:
+                                                                Gain an in-depth understanding of the various digital marketing disciplines</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-lg-3 col-xl-4 grid-item cat-b">
+                                                    <div class="card video-card">
+                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL9ooVrP1hQOGHNaCT7_fwe9AabjZI1RjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Artificial Intelligence Course
+                                        </h3>
+                                                            <p class="card-text video-card__card-text">This video on Artificial Intelligence gives you a brief introduction to AI and how AI can change the world.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 grid-item cat-c">
+                                                    <div class="card video-card"> -->
+                                                        <!-- <div class="embed-responsive embed-responsive-16by9">
+                                                            <iframe class="embed-responsive-item"
+                                                                src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                                                                allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="card-body video-card__card-body">
+                                                            <h3 class="card-title video-card_card-title h5">Card Title 4
+                                                                (C)</h3>
+                                                            <p class="card-text video-card__card-text">Some quick
+                                                                example text to build on the card
+                                                                title and make up the bulk of the card's content.</p>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="owl-carousel testimonial-carousel">
-                        <div class="position-relative bg-secondary p-4 d-none" id="amazon_testimonial">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
-                                style="top: -6px; right: 0"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="assets/img/himanshi.jpeg"
-                                    style="width: 60px; height: 60px" alt="website template image" />
-                                <div class="ml-3">
-                                    <h6 class="font-weight-semi-bold m-0">Himanshi Yadav</h6>
-                                    <small>- Educator</small>
-                                </div>
-                            </div>
-                            <p class="m-0">
-                                “Amazing place to work with cooperative and supporting team members. Everyone here is
-                                ready to give a helping hand if required.”
-                            </p>
-                        </div>
-                        <div class="position-relative bg-secondary p-4 d-none" id="microsoft_testimonial">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
-                                style="top: -6px; right: 0"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="assets/img/Heman.jpeg"
-                                    style="width: 60px; height: 60px" alt="website template image" />
-                                <div class="ml-3" style="color: azure;">
-                                    <h4 class="font-weight-semi-bold m-0">Aman Kumar</h4>
-                                    <small>SDE at Microsoft - Bangalore, Karnataka</small>
-                                </div>
-                            </div>
-                            <p class="m-0" style="color: azure;">
-                                “I learned stuff about software engineering and process and got better at code reviews.
-                                They have a lot of cool internal tools that help you do your job faster. I also learned
-                                more about testing, the importance of unit testing, the importance of not moving your
-                                code up to the next branch if a unit test fails and dealing with hundreds of people
-                                working on the same branch. The main languages used at microsoft is C, C++, C# and
-                                C++/CX (don’t ask). You’ll probably run into HTML 5, javascript and CSS depending on
-                                your team. So like I said, cool tools and some good processes in place to help you
-                                become a better software engineer. The downside is that they limit themselves on
-                                technology they use (this could be changing since Satya is our CEO). What I mean by this
-                                is I’ve never really heard people talk about Unix, perl, python, Java or other
-                                languages. It’s like they don’t exist. I find this to be limiting.”
-                            </p>
-                        </div>
-                        <div class="position-relative bg-secondary p-4 d-none" id="google_testimonial">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
-                                style="top: -6px; right: 0"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="assets/img/mohan.jpeg"
-                                    style="width: 60px; height: 60px" alt="website template image" />
-                                <div class="ml-3">
-                                    <h6 class="font-weight-semi-bold m-0">Mohan Kumar</h6>
-                                    <small>- Educator</small>
-                                </div>
-                            </div>
-                            <p class="m-0">
-                                “Happy to be a part of the Muenot family. It provides quality education and mindful
-                                learning which helps in the inclusive growth of the learners and educators.”
-                            </p>
-                        </div>
-                    </div> -->
                     </div>
-                </section>
             </div>
-            <div class="d-none container-fluid" id="past_records">
+            </section>
+
+            <div class="d-none" id="past_records">
                 <div class="row">
                     <select id="year_r" class="form-control form-select col-lg-4 mx-1 my-1">
                         <!-- <option>Default select</option> -->
@@ -1428,7 +1579,7 @@
                         </div>
                     </div>
                     <div class="section-top-border">
-                        <h3 class="mb-30">Block Quotes</h3>
+                        <h3 class="mb-30">Mentor Say's</h3>
                         <div class="row">
                             <div class="col-lg-12">
                                 <blockquote class="generic-blockquote">
@@ -1480,6 +1631,7 @@
                 <div id="google_2022" class="d-none">google_2022</div>
             </div>
         </div>
+    </div>
 
 
 
