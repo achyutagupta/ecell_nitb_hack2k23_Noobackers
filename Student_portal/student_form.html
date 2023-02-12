@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         html,
         body {
@@ -175,7 +176,11 @@
                 <a class="btn-item" href="https://www.w3docs.com/quiz/#">Select Quiz</a>
             </div> -->
         </div>
-        <form>
+        <form class="shadow-lg border" data-aos="zoom-out"
+        data-aos-offset="0"
+        data-aos-delay="50"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out">
             <div class="title">
                 <i class="fas fa-pencil-alt"></i>
                 <h2>Register here</h2>
@@ -209,7 +214,10 @@
             <button type="submit" id="submit">Submit</button>
         </form>
     </div>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 

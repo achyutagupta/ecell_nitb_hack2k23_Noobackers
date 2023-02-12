@@ -8,6 +8,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body style="overflow: hidden !important;">
@@ -15,7 +16,11 @@
     <section style="background-image: url(employee.jpg); background-size: cover; min-height: 100vh;">
         <div class="w-50 d-flex align-items-center py-lg-3" style="min-height: 100vh; position: relative; left: 55%;">
             <!-- <div class="col-sm-6"> <img src="employee.jpg"></div> -->
-            <div class="container-fluid col-lg-10 shadow mx-3 my-2 px-3 py-3" style="background-color: #D1D2D4; border-radius: 20px;">
+            <div class="container-fluid col-lg-10 shadow mx-3 my-2 px-3 py-3" style="background-color: #D1D2D4; border-radius: 20px;" data-aos="zoom-out"
+            data-aos-offset="0"
+            data-aos-delay="50"
+            data-aos-duration="2000"
+            data-aos-easing="ease-in-out">
                 <h4 class="mb-3 text-xxl-center font-weight-bolder">Create Your Account</h4>
                 <div class="form-group">
                     <label for="full_name">Full Name</label>
@@ -50,7 +55,10 @@
             </div>
         </div>
     </section>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 <!-- https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js -->

@@ -7,10 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Placement Cell</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-
 <body>
-  <nav class="navbar navbar-dark bg-primary text-center" style="background-color: #494ca2 !important;">
+  <nav class="navbar navbar-dark bg-primary text-center" style="background-color: #494ca2 !important;" data-aos="fade"
+  data-aos-offset="0"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out">
     <h1 style="text-align: center;width: 100%; color: #fff;">Welcome to Campus Placement Portal</h1>
   </nav>
   <div class="row justify-content-around my-5 ">
@@ -18,7 +22,11 @@
         <img src="Connect with fellow students sharing the same interests & hobbies to promote mutual growth & development..jpg" alt="" height="100%" width="100%" srcset="">
      </div> -->
 
-      <div id="login-card" class="card col-sm-4  border text-center" style="border-radius: 10px;">
+      <div id="login-card" class="card col-sm-4  border text-center" style="border-radius: 10px;"     data-aos="zoom-out"
+      data-aos-offset="0"
+      data-aos-delay="100"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out">
         <div class="card-body">
           <img class="w-100 mx-auto my-auto" src="student.jpg" style="border-radius: 10px;">
           <h5 class="card-title mt-2">Login As A Student</h5>
@@ -26,7 +34,11 @@
           <a href="Student_portal/login_s.html" class="btn btn-primary" style="background-color: #494ca2;">Login as a Student</a>
         </div>
       </div>
-      <div id="login-card1" class="card col-sm-4 border text-center" style="border-radius: 20px;">
+      <div id="login-card1" class="card col-sm-4 border text-center" style="border-radius: 20px;" data-aos="zoom-out"
+      data-aos-offset="0"
+      data-aos-delay="50"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out">
         <div class="card-body">
           <img class="w-100 mx-auto my-auto" src="company.jpg" style="border-radius: 10px;">
           <h5 class="card-title mt-2">Login as a Company</h5>
@@ -52,6 +64,10 @@
       document.getElementById('login-card1').classList.remove('shadow-lg');
     });
   </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
