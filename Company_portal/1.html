@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+        body {
+            font-family: Roboto, sans-serif;
+        }
+
+        #barchartmain {
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        #Skills {
+            width: 60%;
+            margin-top: 10em;
+
+        }
+
+        #Internship {
+            width: 40%;
+            /* max-height: 100%; */
+            margin-top: 10em;
+
+        }
+
+        #CGPA {
+            width: 70%;
+            margin-top: 10em;
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <div id="barchartmain">
+        <div id="Skills">
+            <h1>Student Skills</h1>
+        </div>
+    </div>
+    <div id="barchartmain">
+        <div id="Internship">
+            <h1>Intership & Placement</h1>
+        </div>
+    </div>
+
+
+    <div id="barchartmain">
+
+
+        <div id="CGPA">
+            <h1>CGPA of Students</h1>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        var options = {
+            series: [{
+                name: 'Students',
+                data: [44, 55, 41, 67, 22, 60]
+            }],
+
+            chart: {
+                height: 500,
+                type: 'bar',
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 10,
+                    columnWidth: '50%',
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                width: 7
+            },
+
+            grid: {
+                row: {
+                    colors: ['#fff', '#f2f2f2']
+                }
+            },
+            xaxis: {
+                labels: {
+                    rotate: -45
+                },
+                categories: ['DSA', 'WEB-D', 'CP', 'APP-D', 'DATA-SCIENCE', 'MANAGEMENT'],
+                tickPlacement: 'on',
+                title: {
+                    text: 'Skills'
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Students',
+                },
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'light',
+                    type: "horizontal",
+                    shadeIntensity: 0.25,
+                    gradientToColors: undefined,
+                    inverseColors: true,
+                    opacityFrom: 0.85,
+                    opacityTo: 0.85,
+                    stops: [50, 0, 100]
+                },
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#Skills"), options);
+        chart.render();
+        // ----------------------------------------------------------------------------------
+
+
+
+
+        var options = {
+            series: [44, 50, 50, 90, 300],
+            labels: ['2 months', '3 months', '6 months', 'PPO', 'FTO'],
+
+            chart: {
+                type: 'donut',
+            },
+
+            responsive: [{
+                breakpoint: 560,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#Internship"), options);
+        chart.render();
+
+
+        // -----------------------------------------------------------------------------------
+
+
+
+        var options = {
+            series: [{
+                name: '6-7 CGPA',
+                data: [44, 55, 41, 37, 22, 43, 21]
+            }, {
+                name: '7-8 CGPA',
+                data: [53, 32, 33, 52, 13, 34, 32]
+            }, {
+                name: '8-8.5 CGPA',
+                data: [12, 17, 11, 9, 15, 11, 20]
+            }, {
+                name: '8.5-9.0',
+                data: [9, 7, 5, 8, 6, 9, 4]
+            }, {
+                name: '9.0-10',
+                data: [25, 12, 19, 32, 25, 24, 10]
+            }],
+            chart: {
+                type: 'bar',
+                height: 600,
+                stacked: true,
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: true,
+                    dataLabels: {
+                        total: {
+                            enabled: true,
+                            offsetX: 0,
+                            style: {
+                                fontSize: '13px',
+                                fontWeight: 900
+                            }
+                        }
+                    }
+                },
+            },
+
+            stroke: {
+                width: 1,
+                colors: ['#fff']
+            },
+
+            xaxis: {
+                categories: ['CSE', 'Civil', 'Mechanical', 'MSME', 'MME', 'ECE', 'EE'],
+                title: {
+                    text: 'Number of Students'
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Branches'
+                },
+            },
+
+            legend: {
+                position: 'top',
+                horizontalAlign: 'center',
+                
+            }
+
+        };
+
+        var chart = new ApexCharts(document.querySelector("#CGPA"), options);
+        chart.render();
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
