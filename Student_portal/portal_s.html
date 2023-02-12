@@ -3,6 +3,7 @@
 
 <head>
     <title>Sidebar 03</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style id="" media="all">
@@ -216,6 +217,8 @@
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
     </style>
+    <link rel="stylesheet" href="css/profile_card.css">
+    <link rel="stylesheet" href="css/portal.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <meta name="robots" content="noindex, follow">
@@ -234,19 +237,19 @@
                 <h1><a href="index.html" class="logo">Student Profile</a></h1>
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
-                        <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+                        <a onclick="displayprofile()"><span class="fa fa-home mr-3"></span> Home</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#"><span class="fa fa-user mr-3"></span> About</a>
+                    </li> -->
+                    <li>
+                        <a onclick="displayMentor();"><span class="fa fa-briefcase mr-3"></span>Mentorship Programme</a>
                     </li>
                     <li>
-                        <a href="#"><span class="fa fa-briefcase mr-3"></span> Portfolio</a>
+                        <a onclick="displayRecords()"><span class="fa fa-sticky-note mr-3"></span>Past Records</a>
                     </li>
                     <li>
-                        <a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="fa fa-paper-plane mr-3"></span> Contact</a>
+                        <a href="student_form.html"><span class="fa fa-paper-plane mr-3"></span>Profile Form</a>
                     </li>
                 </ul>
                 <!-- <div class="mb-5">
@@ -261,19 +264,1225 @@
             </div>
         </nav>
 
-        <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Sidebar #03</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+        <div class="container">
+            <div id="content" class="p-4 p-md-5 pt-5">
+                <div class="container emp-profile">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="profile-img">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
+                                        alt="" />
+                                    <div class="file btn btn-lg btn-primary">
+                                        Change Photo
+                                        <input type="file" name="file" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="profile-head">
+                                    <h5>
+                                        Kshiti Ghelani
+                                    </h5>
+                                    <h6>
+                                        Web Developer and Designer
+                                    </h6>
+                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+                                                role="tab" aria-controls="home" aria-selected="true">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile"
+                                                role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-2">
+                            <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
+                        </div> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="profile-work">
+                                    <p>WORK LINK</p>
+                                    <a href="">Website Link</a><br />
+                                    <a href="">Bootsnipp Profile</a><br />
+                                    <a href="">Bootply Profile</a>
+                                    <p>SKILLS</p>
+                                    <a href="">Web Designer</a><br />
+                                    <a href="">Web Developer</a><br />
+                                    <a href="">WordPress</a><br />
+                                    <a href="">WooCommerce</a><br />
+                                    <a href="">PHP, .Net</a><br />
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="tab-content profile-tab" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                        aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Kshiti123</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Kshiti Ghelani</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>kshitighelani@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>123 456 7890</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Profession</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Web Developer and Designer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
+                                        aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Experience</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Hourly Rate</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>10$/hr</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Total Projects</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>230</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>English Level</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Availability</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>6 months</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Your Bio</label><br />
+                                                <p>Your detail description</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-none" id="mentor">
+                <select id="company" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                    aria-placeholder="Select Your Dream Company">
+                    <button>show</button>
+                    <option selected>Select Your Dream Company</option>
+                    <option value="1">Amazon</option>
+                    <option value="2">Microsoft</option>
+                    <option value="3">Google</option>
+                </select>
+                <section class="testimonials container-fluid py-5">
+                    <div class="container">
+                        <div class="text-center pb-2">
+                            <h6 class="text-primary text-uppercase font-weight-bold">
+                                Testimonial
+                            </h6>
+                            <h1 class="mb-4">Listen to your mentors</h1>
+                        </div>
+                        <div class="section-top-border d-none" id="amazon_testimonial">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="profile-card">
+                                        <div class="wrapper">
+                                            <div class="profile-card js-profile-card">
+                                                <div class="profile-card__img">
+                                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                                        alt="profile card">
+                                                </div>
+
+                                                <div class="profile-card__cnt js-profile-cnt">
+                                                    <div class="profile-card__name">Muhammed Erdem</div>
+                                                    <div class="profile-card__txt">Front-end Developer from
+                                                        <strong>Mesopotamia</strong></div>
+                                                    <div class="profile-card-loc">
+                                                        <span class="profile-card-loc__icon">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#icon-location"></use>
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="profile-card-loc__txt">
+                                                            Istanbul, Turkey
+                                                        </span>
+                                                    </div>
+                                                    <div class="profile-card-social">
+                                                        <a href="https://www.facebook.com/iaMuhammedErdem"
+                                                            class="profile-card-social__item facebook" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-facebook"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://twitter.com/iaMuhammedErdem"
+                                                            class="profile-card-social__item twitter" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-twitter"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://www.instagram.com/iamuhammederdem"
+                                                            class="profile-card-social__item instagram" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-instagram"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://www.behance.net/iaMuhammedErdem"
+                                                            class="profile-card-social__item behance" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-behance"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://github.com/muhammederdem"
+                                                            class="profile-card-social__item github" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-github"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://codepen.io/JavaScriptJunkie"
+                                                            class="profile-card-social__item codepen" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-codepen"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="http://muhammederdem.com.tr/"
+                                                            class="profile-card-social__item link" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-link"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                    </div>
+
+                                                    <div class="profile-card-ctr">
+                                                        <button
+                                                            class="profile-card__button button--blue js-message-btn">Message</button>
+                                                        <button
+                                                            class="profile-card__button button--orange">Follow</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-card-message js-message">
+                                                    <form class="profile-card-form">
+                                                        <div class="profile-card-form__container">
+                                                            <textarea placeholder="Say something..."></textarea>
+                                                        </div>
+
+                                                        <div class="profile-card-form__bottom">
+                                                            <button
+                                                                class="profile-card__button button--blue js-message-close">
+                                                                Send
+                                                            </button>
+
+                                                            <button
+                                                                class="profile-card__button button--gray js-message-close">
+                                                                Cancel
+                                                            </button>
+                                                        </div>
+                                                    </form>
+
+                                                    <div class="profile-card__overlay js-message-close"></div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <svg hidden="hidden">
+                                            <defs>
+                                                <symbol id="icon-codepen" viewBox="0 0 32 32">
+                                                    <title>codepen</title>
+                                                    <path
+                                                        d="M31.872 10.912v-0.032c0-0.064 0-0.064 0-0.096v-0.064c0-0.064 0-0.064-0.064-0.096 0 0 0-0.064-0.064-0.064 0-0.064-0.064-0.064-0.064-0.096 0 0 0-0.064-0.064-0.064 0-0.064-0.064-0.064-0.064-0.096l-0.192-0.192v-0.064l-0.064-0.064-14.592-9.696c-0.448-0.32-1.056-0.32-1.536 0l-14.528 9.696-0.32 0.32c0 0-0.064 0.064-0.064 0.096 0 0 0 0.064-0.064 0.064 0 0.064-0.064 0.064-0.064 0.096 0 0 0 0.064-0.064 0.064 0 0.064 0 0.064-0.064 0.096v0.064c0 0.064 0 0.064 0 0.096v0.064c0 0.064 0 0.096 0 0.16v9.696c0 0.064 0 0.096 0 0.16v0.064c0 0.064 0 0.064 0 0.096v0.064c0 0.064 0 0.064 0.064 0.096 0 0 0 0.064 0.064 0.064 0 0.064 0.064 0.064 0.064 0.096 0 0 0 0.064 0.064 0.064 0 0.064 0.064 0.064 0.064 0.096l0.256 0.256 0.064 0.032 14.528 9.728c0.224 0.16 0.48 0.224 0.768 0.224s0.544-0.064 0.768-0.224l14.528-9.728 0.32-0.32c0 0 0.064-0.064 0.064-0.096 0 0 0-0.064 0.064-0.064 0-0.064 0.064-0.064 0.064-0.096 0 0 0-0.064 0.064-0.064 0-0.064 0-0.064 0.064-0.096v-0.032c0-0.064 0-0.064 0-0.096v-0.064c0-0.064 0-0.096 0-0.16v-9.664c0-0.064 0-0.096 0-0.224zM17.312 4l10.688 7.136-4.768 3.168-5.92-3.936v-6.368zM14.56 4v6.368l-5.92 3.968-4.768-3.168 10.688-7.168zM2.784 13.664l3.392 2.304-3.392 2.304c0 0 0-4.608 0-4.608zM14.56 28l-10.688-7.136 4.768-3.2 5.92 3.936v6.4zM15.936 19.2l-4.832-3.232 4.832-3.232 4.832 3.232-4.832 3.232zM17.312 28v-6.432l5.92-3.936 4.8 3.168-10.72 7.2zM29.12 18.272l-3.392-2.304 3.392-2.304v4.608z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-github" viewBox="0 0 32 32">
+                                                    <title>github</title>
+                                                    <path
+                                                        d="M16.192 0.512c-8.832 0-16 7.168-16 16 0 7.072 4.576 13.056 10.944 15.168 0.8 0.16 1.088-0.352 1.088-0.768 0-0.384 0-1.632-0.032-2.976-4.448 0.96-5.376-1.888-5.376-1.888-0.736-1.856-1.792-2.336-1.792-2.336-1.44-0.992 0.096-0.96 0.096-0.96 1.6 0.128 2.464 1.664 2.464 1.664 1.44 2.432 3.744 1.728 4.672 1.344 0.128-1.024 0.544-1.728 1.024-2.144-3.552-0.448-7.296-1.824-7.296-7.936 0-1.76 0.64-3.168 1.664-4.288-0.16-0.416-0.704-2.016 0.16-4.224 0 0 1.344-0.416 4.416 1.632 1.28-0.352 2.656-0.544 4-0.544s2.72 0.192 4 0.544c3.040-2.080 4.384-1.632 4.384-1.632 0.864 2.208 0.32 3.84 0.16 4.224 1.024 1.12 1.632 2.56 1.632 4.288 0 6.144-3.744 7.488-7.296 7.904 0.576 0.512 1.088 1.472 1.088 2.976 0 2.144-0.032 3.872-0.032 4.384 0 0.416 0.288 0.928 1.088 0.768 6.368-2.112 10.944-8.128 10.944-15.168 0-8.896-7.168-16.032-16-16.032z">
+                                                    </path>
+                                                    <path
+                                                        d="M6.24 23.488c-0.032 0.064-0.16 0.096-0.288 0.064-0.128-0.064-0.192-0.16-0.128-0.256 0.032-0.096 0.16-0.096 0.288-0.064 0.128 0.064 0.192 0.16 0.128 0.256v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M6.912 24.192c-0.064 0.064-0.224 0.032-0.32-0.064s-0.128-0.256-0.032-0.32c0.064-0.064 0.224-0.032 0.32 0.064s0.096 0.256 0.032 0.32v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M7.52 25.12c-0.096 0.064-0.256 0-0.352-0.128s-0.096-0.32 0-0.384c0.096-0.064 0.256 0 0.352 0.128 0.128 0.128 0.128 0.32 0 0.384v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M8.384 26.016c-0.096 0.096-0.288 0.064-0.416-0.064s-0.192-0.32-0.096-0.416c0.096-0.096 0.288-0.064 0.416 0.064 0.16 0.128 0.192 0.32 0.096 0.416v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M9.6 26.528c-0.032 0.128-0.224 0.192-0.384 0.128-0.192-0.064-0.288-0.192-0.256-0.32s0.224-0.192 0.416-0.128c0.128 0.032 0.256 0.192 0.224 0.32v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M10.912 26.624c0 0.128-0.16 0.256-0.352 0.256s-0.352-0.096-0.352-0.224c0-0.128 0.16-0.256 0.352-0.256 0.192-0.032 0.352 0.096 0.352 0.224v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M12.128 26.4c0.032 0.128-0.096 0.256-0.288 0.288s-0.352-0.032-0.384-0.16c-0.032-0.128 0.096-0.256 0.288-0.288s0.352 0.032 0.384 0.16v0z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-location" viewBox="0 0 32 32">
+                                                    <title>location</title>
+                                                    <path
+                                                        d="M16 31.68c-0.352 0-0.672-0.064-1.024-0.16-0.8-0.256-1.44-0.832-1.824-1.6l-6.784-13.632c-1.664-3.36-1.568-7.328 0.32-10.592 1.856-3.2 4.992-5.152 8.608-5.376h1.376c3.648 0.224 6.752 2.176 8.608 5.376 1.888 3.264 2.016 7.232 0.352 10.592l-6.816 13.664c-0.288 0.608-0.8 1.12-1.408 1.408-0.448 0.224-0.928 0.32-1.408 0.32zM15.392 2.368c-2.88 0.192-5.408 1.76-6.912 4.352-1.536 2.688-1.632 5.92-0.288 8.672l6.816 13.632c0.128 0.256 0.352 0.448 0.64 0.544s0.576 0.064 0.832-0.064c0.224-0.096 0.384-0.288 0.48-0.48l6.816-13.664c1.376-2.752 1.248-5.984-0.288-8.672-1.472-2.56-4-4.128-6.88-4.32h-1.216zM16 17.888c-3.264 0-5.92-2.656-5.92-5.92 0-3.232 2.656-5.888 5.92-5.888s5.92 2.656 5.92 5.92c0 3.264-2.656 5.888-5.92 5.888zM16 8.128c-2.144 0-3.872 1.728-3.872 3.872s1.728 3.872 3.872 3.872 3.872-1.728 3.872-3.872c0-2.144-1.76-3.872-3.872-3.872z">
+                                                    </path>
+                                                    <path
+                                                        d="M16 32c-0.384 0-0.736-0.064-1.12-0.192-0.864-0.288-1.568-0.928-1.984-1.728l-6.784-13.664c-1.728-3.456-1.6-7.52 0.352-10.912 1.888-3.264 5.088-5.28 8.832-5.504h1.376c3.744 0.224 6.976 2.24 8.864 5.536 1.952 3.36 2.080 7.424 0.352 10.912l-6.784 13.632c-0.32 0.672-0.896 1.216-1.568 1.568-0.48 0.224-0.992 0.352-1.536 0.352zM15.36 0.64h-0.064c-3.488 0.224-6.56 2.112-8.32 5.216-1.824 3.168-1.952 7.040-0.32 10.304l6.816 13.632c0.32 0.672 0.928 1.184 1.632 1.44s1.472 0.192 2.176-0.16c0.544-0.288 1.024-0.736 1.28-1.28l6.816-13.632c1.632-3.264 1.504-7.136-0.32-10.304-1.824-3.104-4.864-5.024-8.384-5.216h-1.312zM16 29.952c-0.16 0-0.32-0.032-0.448-0.064-0.352-0.128-0.64-0.384-0.8-0.704l-6.816-13.664c-1.408-2.848-1.312-6.176 0.288-8.96 1.536-2.656 4.16-4.32 7.168-4.512h1.216c3.040 0.192 5.632 1.824 7.2 4.512 1.6 2.752 1.696 6.112 0.288 8.96l-6.848 13.632c-0.128 0.288-0.352 0.512-0.64 0.64-0.192 0.096-0.384 0.16-0.608 0.16zM15.424 2.688c-2.784 0.192-5.216 1.696-6.656 4.192-1.504 2.592-1.6 5.696-0.256 8.352l6.816 13.632c0.096 0.192 0.256 0.32 0.448 0.384s0.416 0.064 0.608-0.032c0.16-0.064 0.288-0.192 0.352-0.352l6.816-13.664c1.312-2.656 1.216-5.792-0.288-8.352-1.472-2.464-3.904-4-6.688-4.16h-1.152zM16 18.208c-3.424 0-6.24-2.784-6.24-6.24 0-3.424 2.816-6.208 6.24-6.208s6.24 2.784 6.24 6.24c0 3.424-2.816 6.208-6.24 6.208zM16 6.4c-3.072 0-5.6 2.496-5.6 5.6 0 3.072 2.528 5.6 5.6 5.6s5.6-2.496 5.6-5.6c0-3.104-2.528-5.6-5.6-5.6zM16 16.16c-2.304 0-4.16-1.888-4.16-4.16s1.888-4.16 4.16-4.16c2.304 0 4.16 1.888 4.16 4.16s-1.856 4.16-4.16 4.16zM16 8.448c-1.952 0-3.552 1.6-3.552 3.552s1.6 3.552 3.552 3.552c1.952 0 3.552-1.6 3.552-3.552s-1.6-3.552-3.552-3.552z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-facebook" viewBox="0 0 32 32">
+                                                    <title>facebook</title>
+                                                    <path
+                                                        d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-instagram" viewBox="0 0 32 32">
+                                                    <title>instagram</title>
+                                                    <path
+                                                        d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+                                                    </path>
+                                                    <path
+                                                        d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-twitter" viewBox="0 0 32 32">
+                                                    <title>twitter</title>
+                                                    <path
+                                                        d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-behance" viewBox="0 0 32 32">
+                                                    <title>behance</title>
+                                                    <path
+                                                        d="M9.281 6.412c0.944 0 1.794 0.081 2.569 0.25 0.775 0.162 1.431 0.438 1.988 0.813 0.55 0.375 0.975 0.875 1.287 1.5 0.3 0.619 0.45 1.394 0.45 2.313 0 0.994-0.225 1.819-0.675 2.481-0.456 0.662-1.119 1.2-2.006 1.625 1.213 0.35 2.106 0.962 2.706 1.831 0.6 0.875 0.887 1.925 0.887 3.163 0 1-0.194 1.856-0.575 2.581-0.387 0.731-0.912 1.325-1.556 1.781-0.65 0.462-1.4 0.8-2.237 1.019-0.831 0.219-1.688 0.331-2.575 0.331h-9.544v-19.688h9.281zM8.719 14.363c0.769 0 1.406-0.181 1.906-0.55 0.5-0.363 0.738-0.963 0.738-1.787 0-0.456-0.081-0.838-0.244-1.131-0.169-0.294-0.387-0.525-0.669-0.688-0.275-0.169-0.588-0.281-0.956-0.344-0.356-0.069-0.731-0.1-1.113-0.1h-4.050v4.6h4.388zM8.956 22.744c0.425 0 0.831-0.038 1.213-0.125 0.387-0.087 0.731-0.219 1.019-0.419 0.287-0.194 0.531-0.45 0.706-0.788 0.175-0.331 0.256-0.756 0.256-1.275 0-1.012-0.287-1.738-0.856-2.175-0.569-0.431-1.325-0.644-2.262-0.644h-4.7v5.419h4.625z">
+                                                    </path>
+                                                    <path
+                                                        d="M22.663 22.675c0.587 0.575 1.431 0.863 2.531 0.863 0.788 0 1.475-0.2 2.044-0.6s0.913-0.825 1.044-1.262h3.45c-0.556 1.719-1.394 2.938-2.544 3.675-1.131 0.738-2.519 1.113-4.125 1.113-1.125 0-2.131-0.181-3.038-0.538-0.906-0.363-1.663-0.869-2.3-1.531-0.619-0.663-1.106-1.45-1.45-2.375-0.337-0.919-0.512-1.938-0.512-3.038 0-1.069 0.175-2.063 0.525-2.981 0.356-0.925 0.844-1.719 1.494-2.387s1.413-1.2 2.313-1.588c0.894-0.387 1.881-0.581 2.975-0.581 1.206 0 2.262 0.231 3.169 0.706 0.9 0.469 1.644 1.1 2.225 1.887s0.994 1.694 1.25 2.706c0.256 1.012 0.344 2.069 0.275 3.175h-10.294c0 1.119 0.375 2.188 0.969 2.756zM27.156 15.188c-0.462-0.512-1.256-0.794-2.212-0.794-0.625 0-1.144 0.106-1.556 0.319-0.406 0.213-0.738 0.475-0.994 0.787-0.25 0.313-0.425 0.65-0.525 1.006-0.1 0.344-0.163 0.663-0.181 0.938h6.375c-0.094-1-0.438-1.738-0.906-2.256z">
+                                                    </path>
+                                                    <path d="M20.887 8h7.981v1.944h-7.981v-1.944z"></path>
+                                                </symbol>
+
+                                                <symbol id="icon-link" viewBox="0 0 32 32">
+                                                    <title>link</title>
+                                                    <path
+                                                        d="M17.984 11.456c-0.704 0.704-0.704 1.856 0 2.56 2.112 2.112 2.112 5.568 0 7.68l-5.12 5.12c-2.048 2.048-5.632 2.048-7.68 0-1.024-1.024-1.6-2.4-1.6-3.84s0.576-2.816 1.6-3.84c0.704-0.704 0.704-1.856 0-2.56s-1.856-0.704-2.56 0c-1.696 1.696-2.624 3.968-2.624 6.368 0 2.432 0.928 4.672 2.656 6.4 1.696 1.696 3.968 2.656 6.4 2.656s4.672-0.928 6.4-2.656l5.12-5.12c3.52-3.52 3.52-9.248 0-12.8-0.736-0.672-1.888-0.672-2.592 0.032z">
+                                                    </path>
+                                                    <path
+                                                        d="M29.344 2.656c-1.696-1.728-3.968-2.656-6.4-2.656s-4.672 0.928-6.4 2.656l-5.12 5.12c-3.52 3.52-3.52 9.248 0 12.8 0.352 0.352 0.8 0.544 1.28 0.544s0.928-0.192 1.28-0.544c0.704-0.704 0.704-1.856 0-2.56-2.112-2.112-2.112-5.568 0-7.68l5.12-5.12c2.048-2.048 5.632-2.048 7.68 0 1.024 1.024 1.6 2.4 1.6 3.84s-0.576 2.816-1.6 3.84c-0.704 0.704-0.704 1.856 0 2.56s1.856 0.704 2.56 0c1.696-1.696 2.656-3.968 2.656-6.4s-0.928-4.704-2.656-6.4z">
+                                                    </path>
+                                                </symbol>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <h3 class="mb-30">Block Quotes</h3>
+                                    <blockquote class="generic-blockquote">
+                                        “I recently finished my internship at Amazon as Data Scientist II (L5). My
+                                        internship started on 4th January 2021 and ended on 4th June 2021. I will be
+                                        joining
+                                        Walmart Labs as Data Scientist next week. Let me share my experience of working
+                                        at
+                                        Amazon.”
+                                    </blockquote>
+                                    <blockquote class="generic-blockquote">
+                                        “I had my campus internship placements last October when Amazon came to hire
+                                        interns
+                                        for the position of L4 Data Scientist. For the role of Data Scientist, you need
+                                        to
+                                        clear the hiring bar on two levers – coding ability and knowledge expertise in
+                                        Data
+                                        Science and Machine Learning. So there were only two rounds – coding
+                                        shortlisting
+                                        test and one round of interview.”
+                                    </blockquote>
+                                    <blockquote class="generic-blockquote">
+                                        “I and my friend were initially selected for the L4 DS role but then Amazon
+                                        offered
+                                        us an L5 DS role even when both of us have only 1 - 1.5 years of experience,
+                                        perhaps
+                                        because of our performance in rounds and the fact that we were post-graduate
+                                        students. Our stipend was also increased accordingly. Amazon also makes sure
+                                        that
+                                        all the resources needed by an intern (most importantly being laptop and
+                                        security
+                                        keys) during the internship are made available to them prior to joining date,
+                                        unlike
+                                        some of my friends who received their laptop one week after their joining in
+                                        other
+                                        companies. Apart from that, Amazon also sends some welcome goodies to their
+                                        interns.”
+                                    </blockquote>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-top-border d-none" id="microsoft_testimonial">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="profile-card">
+                                        <div class="wrapper">
+                                            <div class="profile-card js-profile-card">
+                                                <div class="profile-card__img">
+                                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                                        alt="profile card">
+                                                </div>
+
+                                                <div class="profile-card__cnt js-profile-cnt">
+                                                    <div class="profile-card__name">Muhammed Erdem</div>
+                                                    <div class="profile-card__txt">Front-end Developer from
+                                                        <strong>Mesopotamia</strong></div>
+                                                    <div class="profile-card-loc">
+                                                        <span class="profile-card-loc__icon">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#icon-location"></use>
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="profile-card-loc__txt">
+                                                            Istanbul, Turkey
+                                                        </span>
+                                                    </div>
+                                                    <div class="profile-card-social">
+                                                        <a href="https://www.facebook.com/iaMuhammedErdem"
+                                                            class="profile-card-social__item facebook" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-facebook"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://twitter.com/iaMuhammedErdem"
+                                                            class="profile-card-social__item twitter" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-twitter"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://www.instagram.com/iamuhammederdem"
+                                                            class="profile-card-social__item instagram" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-instagram"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://www.behance.net/iaMuhammedErdem"
+                                                            class="profile-card-social__item behance" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-behance"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://github.com/muhammederdem"
+                                                            class="profile-card-social__item github" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-github"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://codepen.io/JavaScriptJunkie"
+                                                            class="profile-card-social__item codepen" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-codepen"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="http://muhammederdem.com.tr/"
+                                                            class="profile-card-social__item link" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-link"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                    </div>
+
+                                                    <div class="profile-card-ctr">
+                                                        <button
+                                                            class="profile-card__button button--blue js-message-btn">Message</button>
+                                                        <button
+                                                            class="profile-card__button button--orange">Follow</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-card-message js-message">
+                                                    <form class="profile-card-form">
+                                                        <div class="profile-card-form__container">
+                                                            <textarea placeholder="Say something..."></textarea>
+                                                        </div>
+
+                                                        <div class="profile-card-form__bottom">
+                                                            <button
+                                                                class="profile-card__button button--blue js-message-close">
+                                                                Send
+                                                            </button>
+
+                                                            <button
+                                                                class="profile-card__button button--gray js-message-close">
+                                                                Cancel
+                                                            </button>
+                                                        </div>
+                                                    </form>
+
+                                                    <div class="profile-card__overlay js-message-close"></div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <svg hidden="hidden">
+                                            <defs>
+                                                <symbol id="icon-codepen" viewBox="0 0 32 32">
+                                                    <title>codepen</title>
+                                                    <path
+                                                        d="M31.872 10.912v-0.032c0-0.064 0-0.064 0-0.096v-0.064c0-0.064 0-0.064-0.064-0.096 0 0 0-0.064-0.064-0.064 0-0.064-0.064-0.064-0.064-0.096 0 0 0-0.064-0.064-0.064 0-0.064-0.064-0.064-0.064-0.096l-0.192-0.192v-0.064l-0.064-0.064-14.592-9.696c-0.448-0.32-1.056-0.32-1.536 0l-14.528 9.696-0.32 0.32c0 0-0.064 0.064-0.064 0.096 0 0 0 0.064-0.064 0.064 0 0.064-0.064 0.064-0.064 0.096 0 0 0 0.064-0.064 0.064 0 0.064 0 0.064-0.064 0.096v0.064c0 0.064 0 0.064 0 0.096v0.064c0 0.064 0 0.096 0 0.16v9.696c0 0.064 0 0.096 0 0.16v0.064c0 0.064 0 0.064 0 0.096v0.064c0 0.064 0 0.064 0.064 0.096 0 0 0 0.064 0.064 0.064 0 0.064 0.064 0.064 0.064 0.096 0 0 0 0.064 0.064 0.064 0 0.064 0.064 0.064 0.064 0.096l0.256 0.256 0.064 0.032 14.528 9.728c0.224 0.16 0.48 0.224 0.768 0.224s0.544-0.064 0.768-0.224l14.528-9.728 0.32-0.32c0 0 0.064-0.064 0.064-0.096 0 0 0-0.064 0.064-0.064 0-0.064 0.064-0.064 0.064-0.096 0 0 0-0.064 0.064-0.064 0-0.064 0-0.064 0.064-0.096v-0.032c0-0.064 0-0.064 0-0.096v-0.064c0-0.064 0-0.096 0-0.16v-9.664c0-0.064 0-0.096 0-0.224zM17.312 4l10.688 7.136-4.768 3.168-5.92-3.936v-6.368zM14.56 4v6.368l-5.92 3.968-4.768-3.168 10.688-7.168zM2.784 13.664l3.392 2.304-3.392 2.304c0 0 0-4.608 0-4.608zM14.56 28l-10.688-7.136 4.768-3.2 5.92 3.936v6.4zM15.936 19.2l-4.832-3.232 4.832-3.232 4.832 3.232-4.832 3.232zM17.312 28v-6.432l5.92-3.936 4.8 3.168-10.72 7.2zM29.12 18.272l-3.392-2.304 3.392-2.304v4.608z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-github" viewBox="0 0 32 32">
+                                                    <title>github</title>
+                                                    <path
+                                                        d="M16.192 0.512c-8.832 0-16 7.168-16 16 0 7.072 4.576 13.056 10.944 15.168 0.8 0.16 1.088-0.352 1.088-0.768 0-0.384 0-1.632-0.032-2.976-4.448 0.96-5.376-1.888-5.376-1.888-0.736-1.856-1.792-2.336-1.792-2.336-1.44-0.992 0.096-0.96 0.096-0.96 1.6 0.128 2.464 1.664 2.464 1.664 1.44 2.432 3.744 1.728 4.672 1.344 0.128-1.024 0.544-1.728 1.024-2.144-3.552-0.448-7.296-1.824-7.296-7.936 0-1.76 0.64-3.168 1.664-4.288-0.16-0.416-0.704-2.016 0.16-4.224 0 0 1.344-0.416 4.416 1.632 1.28-0.352 2.656-0.544 4-0.544s2.72 0.192 4 0.544c3.040-2.080 4.384-1.632 4.384-1.632 0.864 2.208 0.32 3.84 0.16 4.224 1.024 1.12 1.632 2.56 1.632 4.288 0 6.144-3.744 7.488-7.296 7.904 0.576 0.512 1.088 1.472 1.088 2.976 0 2.144-0.032 3.872-0.032 4.384 0 0.416 0.288 0.928 1.088 0.768 6.368-2.112 10.944-8.128 10.944-15.168 0-8.896-7.168-16.032-16-16.032z">
+                                                    </path>
+                                                    <path
+                                                        d="M6.24 23.488c-0.032 0.064-0.16 0.096-0.288 0.064-0.128-0.064-0.192-0.16-0.128-0.256 0.032-0.096 0.16-0.096 0.288-0.064 0.128 0.064 0.192 0.16 0.128 0.256v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M6.912 24.192c-0.064 0.064-0.224 0.032-0.32-0.064s-0.128-0.256-0.032-0.32c0.064-0.064 0.224-0.032 0.32 0.064s0.096 0.256 0.032 0.32v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M7.52 25.12c-0.096 0.064-0.256 0-0.352-0.128s-0.096-0.32 0-0.384c0.096-0.064 0.256 0 0.352 0.128 0.128 0.128 0.128 0.32 0 0.384v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M8.384 26.016c-0.096 0.096-0.288 0.064-0.416-0.064s-0.192-0.32-0.096-0.416c0.096-0.096 0.288-0.064 0.416 0.064 0.16 0.128 0.192 0.32 0.096 0.416v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M9.6 26.528c-0.032 0.128-0.224 0.192-0.384 0.128-0.192-0.064-0.288-0.192-0.256-0.32s0.224-0.192 0.416-0.128c0.128 0.032 0.256 0.192 0.224 0.32v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M10.912 26.624c0 0.128-0.16 0.256-0.352 0.256s-0.352-0.096-0.352-0.224c0-0.128 0.16-0.256 0.352-0.256 0.192-0.032 0.352 0.096 0.352 0.224v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M12.128 26.4c0.032 0.128-0.096 0.256-0.288 0.288s-0.352-0.032-0.384-0.16c-0.032-0.128 0.096-0.256 0.288-0.288s0.352 0.032 0.384 0.16v0z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-location" viewBox="0 0 32 32">
+                                                    <title>location</title>
+                                                    <path
+                                                        d="M16 31.68c-0.352 0-0.672-0.064-1.024-0.16-0.8-0.256-1.44-0.832-1.824-1.6l-6.784-13.632c-1.664-3.36-1.568-7.328 0.32-10.592 1.856-3.2 4.992-5.152 8.608-5.376h1.376c3.648 0.224 6.752 2.176 8.608 5.376 1.888 3.264 2.016 7.232 0.352 10.592l-6.816 13.664c-0.288 0.608-0.8 1.12-1.408 1.408-0.448 0.224-0.928 0.32-1.408 0.32zM15.392 2.368c-2.88 0.192-5.408 1.76-6.912 4.352-1.536 2.688-1.632 5.92-0.288 8.672l6.816 13.632c0.128 0.256 0.352 0.448 0.64 0.544s0.576 0.064 0.832-0.064c0.224-0.096 0.384-0.288 0.48-0.48l6.816-13.664c1.376-2.752 1.248-5.984-0.288-8.672-1.472-2.56-4-4.128-6.88-4.32h-1.216zM16 17.888c-3.264 0-5.92-2.656-5.92-5.92 0-3.232 2.656-5.888 5.92-5.888s5.92 2.656 5.92 5.92c0 3.264-2.656 5.888-5.92 5.888zM16 8.128c-2.144 0-3.872 1.728-3.872 3.872s1.728 3.872 3.872 3.872 3.872-1.728 3.872-3.872c0-2.144-1.76-3.872-3.872-3.872z">
+                                                    </path>
+                                                    <path
+                                                        d="M16 32c-0.384 0-0.736-0.064-1.12-0.192-0.864-0.288-1.568-0.928-1.984-1.728l-6.784-13.664c-1.728-3.456-1.6-7.52 0.352-10.912 1.888-3.264 5.088-5.28 8.832-5.504h1.376c3.744 0.224 6.976 2.24 8.864 5.536 1.952 3.36 2.080 7.424 0.352 10.912l-6.784 13.632c-0.32 0.672-0.896 1.216-1.568 1.568-0.48 0.224-0.992 0.352-1.536 0.352zM15.36 0.64h-0.064c-3.488 0.224-6.56 2.112-8.32 5.216-1.824 3.168-1.952 7.040-0.32 10.304l6.816 13.632c0.32 0.672 0.928 1.184 1.632 1.44s1.472 0.192 2.176-0.16c0.544-0.288 1.024-0.736 1.28-1.28l6.816-13.632c1.632-3.264 1.504-7.136-0.32-10.304-1.824-3.104-4.864-5.024-8.384-5.216h-1.312zM16 29.952c-0.16 0-0.32-0.032-0.448-0.064-0.352-0.128-0.64-0.384-0.8-0.704l-6.816-13.664c-1.408-2.848-1.312-6.176 0.288-8.96 1.536-2.656 4.16-4.32 7.168-4.512h1.216c3.040 0.192 5.632 1.824 7.2 4.512 1.6 2.752 1.696 6.112 0.288 8.96l-6.848 13.632c-0.128 0.288-0.352 0.512-0.64 0.64-0.192 0.096-0.384 0.16-0.608 0.16zM15.424 2.688c-2.784 0.192-5.216 1.696-6.656 4.192-1.504 2.592-1.6 5.696-0.256 8.352l6.816 13.632c0.096 0.192 0.256 0.32 0.448 0.384s0.416 0.064 0.608-0.032c0.16-0.064 0.288-0.192 0.352-0.352l6.816-13.664c1.312-2.656 1.216-5.792-0.288-8.352-1.472-2.464-3.904-4-6.688-4.16h-1.152zM16 18.208c-3.424 0-6.24-2.784-6.24-6.24 0-3.424 2.816-6.208 6.24-6.208s6.24 2.784 6.24 6.24c0 3.424-2.816 6.208-6.24 6.208zM16 6.4c-3.072 0-5.6 2.496-5.6 5.6 0 3.072 2.528 5.6 5.6 5.6s5.6-2.496 5.6-5.6c0-3.104-2.528-5.6-5.6-5.6zM16 16.16c-2.304 0-4.16-1.888-4.16-4.16s1.888-4.16 4.16-4.16c2.304 0 4.16 1.888 4.16 4.16s-1.856 4.16-4.16 4.16zM16 8.448c-1.952 0-3.552 1.6-3.552 3.552s1.6 3.552 3.552 3.552c1.952 0 3.552-1.6 3.552-3.552s-1.6-3.552-3.552-3.552z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-facebook" viewBox="0 0 32 32">
+                                                    <title>facebook</title>
+                                                    <path
+                                                        d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-instagram" viewBox="0 0 32 32">
+                                                    <title>instagram</title>
+                                                    <path
+                                                        d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+                                                    </path>
+                                                    <path
+                                                        d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-twitter" viewBox="0 0 32 32">
+                                                    <title>twitter</title>
+                                                    <path
+                                                        d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-behance" viewBox="0 0 32 32">
+                                                    <title>behance</title>
+                                                    <path
+                                                        d="M9.281 6.412c0.944 0 1.794 0.081 2.569 0.25 0.775 0.162 1.431 0.438 1.988 0.813 0.55 0.375 0.975 0.875 1.287 1.5 0.3 0.619 0.45 1.394 0.45 2.313 0 0.994-0.225 1.819-0.675 2.481-0.456 0.662-1.119 1.2-2.006 1.625 1.213 0.35 2.106 0.962 2.706 1.831 0.6 0.875 0.887 1.925 0.887 3.163 0 1-0.194 1.856-0.575 2.581-0.387 0.731-0.912 1.325-1.556 1.781-0.65 0.462-1.4 0.8-2.237 1.019-0.831 0.219-1.688 0.331-2.575 0.331h-9.544v-19.688h9.281zM8.719 14.363c0.769 0 1.406-0.181 1.906-0.55 0.5-0.363 0.738-0.963 0.738-1.787 0-0.456-0.081-0.838-0.244-1.131-0.169-0.294-0.387-0.525-0.669-0.688-0.275-0.169-0.588-0.281-0.956-0.344-0.356-0.069-0.731-0.1-1.113-0.1h-4.050v4.6h4.388zM8.956 22.744c0.425 0 0.831-0.038 1.213-0.125 0.387-0.087 0.731-0.219 1.019-0.419 0.287-0.194 0.531-0.45 0.706-0.788 0.175-0.331 0.256-0.756 0.256-1.275 0-1.012-0.287-1.738-0.856-2.175-0.569-0.431-1.325-0.644-2.262-0.644h-4.7v5.419h4.625z">
+                                                    </path>
+                                                    <path
+                                                        d="M22.663 22.675c0.587 0.575 1.431 0.863 2.531 0.863 0.788 0 1.475-0.2 2.044-0.6s0.913-0.825 1.044-1.262h3.45c-0.556 1.719-1.394 2.938-2.544 3.675-1.131 0.738-2.519 1.113-4.125 1.113-1.125 0-2.131-0.181-3.038-0.538-0.906-0.363-1.663-0.869-2.3-1.531-0.619-0.663-1.106-1.45-1.45-2.375-0.337-0.919-0.512-1.938-0.512-3.038 0-1.069 0.175-2.063 0.525-2.981 0.356-0.925 0.844-1.719 1.494-2.387s1.413-1.2 2.313-1.588c0.894-0.387 1.881-0.581 2.975-0.581 1.206 0 2.262 0.231 3.169 0.706 0.9 0.469 1.644 1.1 2.225 1.887s0.994 1.694 1.25 2.706c0.256 1.012 0.344 2.069 0.275 3.175h-10.294c0 1.119 0.375 2.188 0.969 2.756zM27.156 15.188c-0.462-0.512-1.256-0.794-2.212-0.794-0.625 0-1.144 0.106-1.556 0.319-0.406 0.213-0.738 0.475-0.994 0.787-0.25 0.313-0.425 0.65-0.525 1.006-0.1 0.344-0.163 0.663-0.181 0.938h6.375c-0.094-1-0.438-1.738-0.906-2.256z">
+                                                    </path>
+                                                    <path d="M20.887 8h7.981v1.944h-7.981v-1.944z"></path>
+                                                </symbol>
+
+                                                <symbol id="icon-link" viewBox="0 0 32 32">
+                                                    <title>link</title>
+                                                    <path
+                                                        d="M17.984 11.456c-0.704 0.704-0.704 1.856 0 2.56 2.112 2.112 2.112 5.568 0 7.68l-5.12 5.12c-2.048 2.048-5.632 2.048-7.68 0-1.024-1.024-1.6-2.4-1.6-3.84s0.576-2.816 1.6-3.84c0.704-0.704 0.704-1.856 0-2.56s-1.856-0.704-2.56 0c-1.696 1.696-2.624 3.968-2.624 6.368 0 2.432 0.928 4.672 2.656 6.4 1.696 1.696 3.968 2.656 6.4 2.656s4.672-0.928 6.4-2.656l5.12-5.12c3.52-3.52 3.52-9.248 0-12.8-0.736-0.672-1.888-0.672-2.592 0.032z">
+                                                    </path>
+                                                    <path
+                                                        d="M29.344 2.656c-1.696-1.728-3.968-2.656-6.4-2.656s-4.672 0.928-6.4 2.656l-5.12 5.12c-3.52 3.52-3.52 9.248 0 12.8 0.352 0.352 0.8 0.544 1.28 0.544s0.928-0.192 1.28-0.544c0.704-0.704 0.704-1.856 0-2.56-2.112-2.112-2.112-5.568 0-7.68l5.12-5.12c2.048-2.048 5.632-2.048 7.68 0 1.024 1.024 1.6 2.4 1.6 3.84s-0.576 2.816-1.6 3.84c-0.704 0.704-0.704 1.856 0 2.56s1.856 0.704 2.56 0c1.696-1.696 2.656-3.968 2.656-6.4s-0.928-4.704-2.656-6.4z">
+                                                    </path>
+                                                </symbol>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <h3 class="mb-30">Block Quotes</h3>
+                                    <blockquote class="generic-blockquote">
+                                        “
+                                        I learned stuff about software engineering and process and got better at code
+                                        reviews. They have a lot of cool internal tools that help you do your job
+                                        faster. I
+                                        also learned more about testing, the importance of unit testing, the importance
+                                        of
+                                        not moving your code up to the next branch if a unit test fails and dealing with
+                                        hundreds of people working on the same branch. The main languages used at
+                                        microsoft
+                                        is C, C++, C# and C++/CX (don’t ask). You’ll probably run into HTML 5,
+                                        javascript
+                                        and CSS depending on your team. So like I said, cool tools and some good
+                                        processes
+                                        in place to help you become a better software engineer. The downside is that
+                                        they
+                                        limit themselves on technology they use (this could be changing since Satya is
+                                        our
+                                        CEO). What I mean by this is I’ve never really heard people talk about Unix,
+                                        perl,
+                                        python, Java or other languages. It’s like they don’t exist. I find this to be
+                                        limiting.”
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-top-border d-none" id="google_testimonial">
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="profile-card mb-1">
+                                        <div class="wrapper">
+                                            <div class="profile-card js-profile-card">
+                                                <div class="profile-card__img">
+                                                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg"
+                                                        alt="profile card">
+                                                </div>
+
+                                                <div class="profile-card__cnt js-profile-cnt">
+                                                    <div class="profile-card__name">Muhammed Erdem</div>
+                                                    <div class="profile-card__txt">Front-end Developer from
+                                                        <strong>Mesopotamia</strong></div>
+                                                    <div class="profile-card-loc">
+                                                        <span class="profile-card-loc__icon">
+                                                            <svg class="icon">
+                                                                <use xlink:href="#icon-location"></use>
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="profile-card-loc__txt">
+                                                            Istanbul, Turkey
+                                                        </span>
+                                                    </div>
+                                                    <div class="profile-card-social">
+                                                        <a href="https://www.facebook.com/iaMuhammedErdem"
+                                                            class="profile-card-social__item facebook" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-facebook"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://twitter.com/iaMuhammedErdem"
+                                                            class="profile-card-social__item twitter" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-twitter"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://www.instagram.com/iamuhammederdem"
+                                                            class="profile-card-social__item instagram" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-instagram"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://www.behance.net/iaMuhammedErdem"
+                                                            class="profile-card-social__item behance" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-behance"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://github.com/muhammederdem"
+                                                            class="profile-card-social__item github" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-github"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="https://codepen.io/JavaScriptJunkie"
+                                                            class="profile-card-social__item codepen" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-codepen"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                        <a href="http://muhammederdem.com.tr/"
+                                                            class="profile-card-social__item link" target="_blank">
+                                                            <span class="icon-font">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#icon-link"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+
+                                                    </div>
+
+                                                    <div class="profile-card-ctr">
+                                                        <button
+                                                            class="profile-card__button button--blue js-message-btn">Message</button>
+                                                        <button
+                                                            class="profile-card__button button--orange">Follow</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-card-message js-message">
+                                                    <form class="profile-card-form">
+                                                        <div class="profile-card-form__container">
+                                                            <textarea placeholder="Say something..."></textarea>
+                                                        </div>
+
+                                                        <div class="profile-card-form__bottom">
+                                                            <button
+                                                                class="profile-card__button button--blue js-message-close">
+                                                                Send
+                                                            </button>
+
+                                                            <button
+                                                                class="profile-card__button button--gray js-message-close">
+                                                                Cancel
+                                                            </button>
+                                                        </div>
+                                                    </form>
+
+                                                    <div class="profile-card__overlay js-message-close"></div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <svg hidden="hidden">
+                                            <defs>
+                                                <symbol id="icon-codepen" viewBox="0 0 32 32">
+                                                    <title>codepen</title>
+                                                    <path
+                                                        d="M31.872 10.912v-0.032c0-0.064 0-0.064 0-0.096v-0.064c0-0.064 0-0.064-0.064-0.096 0 0 0-0.064-0.064-0.064 0-0.064-0.064-0.064-0.064-0.096 0 0 0-0.064-0.064-0.064 0-0.064-0.064-0.064-0.064-0.096l-0.192-0.192v-0.064l-0.064-0.064-14.592-9.696c-0.448-0.32-1.056-0.32-1.536 0l-14.528 9.696-0.32 0.32c0 0-0.064 0.064-0.064 0.096 0 0 0 0.064-0.064 0.064 0 0.064-0.064 0.064-0.064 0.096 0 0 0 0.064-0.064 0.064 0 0.064 0 0.064-0.064 0.096v0.064c0 0.064 0 0.064 0 0.096v0.064c0 0.064 0 0.096 0 0.16v9.696c0 0.064 0 0.096 0 0.16v0.064c0 0.064 0 0.064 0 0.096v0.064c0 0.064 0 0.064 0.064 0.096 0 0 0 0.064 0.064 0.064 0 0.064 0.064 0.064 0.064 0.096 0 0 0 0.064 0.064 0.064 0 0.064 0.064 0.064 0.064 0.096l0.256 0.256 0.064 0.032 14.528 9.728c0.224 0.16 0.48 0.224 0.768 0.224s0.544-0.064 0.768-0.224l14.528-9.728 0.32-0.32c0 0 0.064-0.064 0.064-0.096 0 0 0-0.064 0.064-0.064 0-0.064 0.064-0.064 0.064-0.096 0 0 0-0.064 0.064-0.064 0-0.064 0-0.064 0.064-0.096v-0.032c0-0.064 0-0.064 0-0.096v-0.064c0-0.064 0-0.096 0-0.16v-9.664c0-0.064 0-0.096 0-0.224zM17.312 4l10.688 7.136-4.768 3.168-5.92-3.936v-6.368zM14.56 4v6.368l-5.92 3.968-4.768-3.168 10.688-7.168zM2.784 13.664l3.392 2.304-3.392 2.304c0 0 0-4.608 0-4.608zM14.56 28l-10.688-7.136 4.768-3.2 5.92 3.936v6.4zM15.936 19.2l-4.832-3.232 4.832-3.232 4.832 3.232-4.832 3.232zM17.312 28v-6.432l5.92-3.936 4.8 3.168-10.72 7.2zM29.12 18.272l-3.392-2.304 3.392-2.304v4.608z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-github" viewBox="0 0 32 32">
+                                                    <title>github</title>
+                                                    <path
+                                                        d="M16.192 0.512c-8.832 0-16 7.168-16 16 0 7.072 4.576 13.056 10.944 15.168 0.8 0.16 1.088-0.352 1.088-0.768 0-0.384 0-1.632-0.032-2.976-4.448 0.96-5.376-1.888-5.376-1.888-0.736-1.856-1.792-2.336-1.792-2.336-1.44-0.992 0.096-0.96 0.096-0.96 1.6 0.128 2.464 1.664 2.464 1.664 1.44 2.432 3.744 1.728 4.672 1.344 0.128-1.024 0.544-1.728 1.024-2.144-3.552-0.448-7.296-1.824-7.296-7.936 0-1.76 0.64-3.168 1.664-4.288-0.16-0.416-0.704-2.016 0.16-4.224 0 0 1.344-0.416 4.416 1.632 1.28-0.352 2.656-0.544 4-0.544s2.72 0.192 4 0.544c3.040-2.080 4.384-1.632 4.384-1.632 0.864 2.208 0.32 3.84 0.16 4.224 1.024 1.12 1.632 2.56 1.632 4.288 0 6.144-3.744 7.488-7.296 7.904 0.576 0.512 1.088 1.472 1.088 2.976 0 2.144-0.032 3.872-0.032 4.384 0 0.416 0.288 0.928 1.088 0.768 6.368-2.112 10.944-8.128 10.944-15.168 0-8.896-7.168-16.032-16-16.032z">
+                                                    </path>
+                                                    <path
+                                                        d="M6.24 23.488c-0.032 0.064-0.16 0.096-0.288 0.064-0.128-0.064-0.192-0.16-0.128-0.256 0.032-0.096 0.16-0.096 0.288-0.064 0.128 0.064 0.192 0.16 0.128 0.256v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M6.912 24.192c-0.064 0.064-0.224 0.032-0.32-0.064s-0.128-0.256-0.032-0.32c0.064-0.064 0.224-0.032 0.32 0.064s0.096 0.256 0.032 0.32v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M7.52 25.12c-0.096 0.064-0.256 0-0.352-0.128s-0.096-0.32 0-0.384c0.096-0.064 0.256 0 0.352 0.128 0.128 0.128 0.128 0.32 0 0.384v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M8.384 26.016c-0.096 0.096-0.288 0.064-0.416-0.064s-0.192-0.32-0.096-0.416c0.096-0.096 0.288-0.064 0.416 0.064 0.16 0.128 0.192 0.32 0.096 0.416v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M9.6 26.528c-0.032 0.128-0.224 0.192-0.384 0.128-0.192-0.064-0.288-0.192-0.256-0.32s0.224-0.192 0.416-0.128c0.128 0.032 0.256 0.192 0.224 0.32v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M10.912 26.624c0 0.128-0.16 0.256-0.352 0.256s-0.352-0.096-0.352-0.224c0-0.128 0.16-0.256 0.352-0.256 0.192-0.032 0.352 0.096 0.352 0.224v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M12.128 26.4c0.032 0.128-0.096 0.256-0.288 0.288s-0.352-0.032-0.384-0.16c-0.032-0.128 0.096-0.256 0.288-0.288s0.352 0.032 0.384 0.16v0z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-location" viewBox="0 0 32 32">
+                                                    <title>location</title>
+                                                    <path
+                                                        d="M16 31.68c-0.352 0-0.672-0.064-1.024-0.16-0.8-0.256-1.44-0.832-1.824-1.6l-6.784-13.632c-1.664-3.36-1.568-7.328 0.32-10.592 1.856-3.2 4.992-5.152 8.608-5.376h1.376c3.648 0.224 6.752 2.176 8.608 5.376 1.888 3.264 2.016 7.232 0.352 10.592l-6.816 13.664c-0.288 0.608-0.8 1.12-1.408 1.408-0.448 0.224-0.928 0.32-1.408 0.32zM15.392 2.368c-2.88 0.192-5.408 1.76-6.912 4.352-1.536 2.688-1.632 5.92-0.288 8.672l6.816 13.632c0.128 0.256 0.352 0.448 0.64 0.544s0.576 0.064 0.832-0.064c0.224-0.096 0.384-0.288 0.48-0.48l6.816-13.664c1.376-2.752 1.248-5.984-0.288-8.672-1.472-2.56-4-4.128-6.88-4.32h-1.216zM16 17.888c-3.264 0-5.92-2.656-5.92-5.92 0-3.232 2.656-5.888 5.92-5.888s5.92 2.656 5.92 5.92c0 3.264-2.656 5.888-5.92 5.888zM16 8.128c-2.144 0-3.872 1.728-3.872 3.872s1.728 3.872 3.872 3.872 3.872-1.728 3.872-3.872c0-2.144-1.76-3.872-3.872-3.872z">
+                                                    </path>
+                                                    <path
+                                                        d="M16 32c-0.384 0-0.736-0.064-1.12-0.192-0.864-0.288-1.568-0.928-1.984-1.728l-6.784-13.664c-1.728-3.456-1.6-7.52 0.352-10.912 1.888-3.264 5.088-5.28 8.832-5.504h1.376c3.744 0.224 6.976 2.24 8.864 5.536 1.952 3.36 2.080 7.424 0.352 10.912l-6.784 13.632c-0.32 0.672-0.896 1.216-1.568 1.568-0.48 0.224-0.992 0.352-1.536 0.352zM15.36 0.64h-0.064c-3.488 0.224-6.56 2.112-8.32 5.216-1.824 3.168-1.952 7.040-0.32 10.304l6.816 13.632c0.32 0.672 0.928 1.184 1.632 1.44s1.472 0.192 2.176-0.16c0.544-0.288 1.024-0.736 1.28-1.28l6.816-13.632c1.632-3.264 1.504-7.136-0.32-10.304-1.824-3.104-4.864-5.024-8.384-5.216h-1.312zM16 29.952c-0.16 0-0.32-0.032-0.448-0.064-0.352-0.128-0.64-0.384-0.8-0.704l-6.816-13.664c-1.408-2.848-1.312-6.176 0.288-8.96 1.536-2.656 4.16-4.32 7.168-4.512h1.216c3.040 0.192 5.632 1.824 7.2 4.512 1.6 2.752 1.696 6.112 0.288 8.96l-6.848 13.632c-0.128 0.288-0.352 0.512-0.64 0.64-0.192 0.096-0.384 0.16-0.608 0.16zM15.424 2.688c-2.784 0.192-5.216 1.696-6.656 4.192-1.504 2.592-1.6 5.696-0.256 8.352l6.816 13.632c0.096 0.192 0.256 0.32 0.448 0.384s0.416 0.064 0.608-0.032c0.16-0.064 0.288-0.192 0.352-0.352l6.816-13.664c1.312-2.656 1.216-5.792-0.288-8.352-1.472-2.464-3.904-4-6.688-4.16h-1.152zM16 18.208c-3.424 0-6.24-2.784-6.24-6.24 0-3.424 2.816-6.208 6.24-6.208s6.24 2.784 6.24 6.24c0 3.424-2.816 6.208-6.24 6.208zM16 6.4c-3.072 0-5.6 2.496-5.6 5.6 0 3.072 2.528 5.6 5.6 5.6s5.6-2.496 5.6-5.6c0-3.104-2.528-5.6-5.6-5.6zM16 16.16c-2.304 0-4.16-1.888-4.16-4.16s1.888-4.16 4.16-4.16c2.304 0 4.16 1.888 4.16 4.16s-1.856 4.16-4.16 4.16zM16 8.448c-1.952 0-3.552 1.6-3.552 3.552s1.6 3.552 3.552 3.552c1.952 0 3.552-1.6 3.552-3.552s-1.6-3.552-3.552-3.552z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-facebook" viewBox="0 0 32 32">
+                                                    <title>facebook</title>
+                                                    <path
+                                                        d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-instagram" viewBox="0 0 32 32">
+                                                    <title>instagram</title>
+                                                    <path
+                                                        d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+                                                    </path>
+                                                    <path
+                                                        d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+                                                    </path>
+                                                    <path
+                                                        d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-twitter" viewBox="0 0 32 32">
+                                                    <title>twitter</title>
+                                                    <path
+                                                        d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+                                                    </path>
+                                                </symbol>
+
+                                                <symbol id="icon-behance" viewBox="0 0 32 32">
+                                                    <title>behance</title>
+                                                    <path
+                                                        d="M9.281 6.412c0.944 0 1.794 0.081 2.569 0.25 0.775 0.162 1.431 0.438 1.988 0.813 0.55 0.375 0.975 0.875 1.287 1.5 0.3 0.619 0.45 1.394 0.45 2.313 0 0.994-0.225 1.819-0.675 2.481-0.456 0.662-1.119 1.2-2.006 1.625 1.213 0.35 2.106 0.962 2.706 1.831 0.6 0.875 0.887 1.925 0.887 3.163 0 1-0.194 1.856-0.575 2.581-0.387 0.731-0.912 1.325-1.556 1.781-0.65 0.462-1.4 0.8-2.237 1.019-0.831 0.219-1.688 0.331-2.575 0.331h-9.544v-19.688h9.281zM8.719 14.363c0.769 0 1.406-0.181 1.906-0.55 0.5-0.363 0.738-0.963 0.738-1.787 0-0.456-0.081-0.838-0.244-1.131-0.169-0.294-0.387-0.525-0.669-0.688-0.275-0.169-0.588-0.281-0.956-0.344-0.356-0.069-0.731-0.1-1.113-0.1h-4.050v4.6h4.388zM8.956 22.744c0.425 0 0.831-0.038 1.213-0.125 0.387-0.087 0.731-0.219 1.019-0.419 0.287-0.194 0.531-0.45 0.706-0.788 0.175-0.331 0.256-0.756 0.256-1.275 0-1.012-0.287-1.738-0.856-2.175-0.569-0.431-1.325-0.644-2.262-0.644h-4.7v5.419h4.625z">
+                                                    </path>
+                                                    <path
+                                                        d="M22.663 22.675c0.587 0.575 1.431 0.863 2.531 0.863 0.788 0 1.475-0.2 2.044-0.6s0.913-0.825 1.044-1.262h3.45c-0.556 1.719-1.394 2.938-2.544 3.675-1.131 0.738-2.519 1.113-4.125 1.113-1.125 0-2.131-0.181-3.038-0.538-0.906-0.363-1.663-0.869-2.3-1.531-0.619-0.663-1.106-1.45-1.45-2.375-0.337-0.919-0.512-1.938-0.512-3.038 0-1.069 0.175-2.063 0.525-2.981 0.356-0.925 0.844-1.719 1.494-2.387s1.413-1.2 2.313-1.588c0.894-0.387 1.881-0.581 2.975-0.581 1.206 0 2.262 0.231 3.169 0.706 0.9 0.469 1.644 1.1 2.225 1.887s0.994 1.694 1.25 2.706c0.256 1.012 0.344 2.069 0.275 3.175h-10.294c0 1.119 0.375 2.188 0.969 2.756zM27.156 15.188c-0.462-0.512-1.256-0.794-2.212-0.794-0.625 0-1.144 0.106-1.556 0.319-0.406 0.213-0.738 0.475-0.994 0.787-0.25 0.313-0.425 0.65-0.525 1.006-0.1 0.344-0.163 0.663-0.181 0.938h6.375c-0.094-1-0.438-1.738-0.906-2.256z">
+                                                    </path>
+                                                    <path d="M20.887 8h7.981v1.944h-7.981v-1.944z"></path>
+                                                </symbol>
+
+                                                <symbol id="icon-link" viewBox="0 0 32 32">
+                                                    <title>link</title>
+                                                    <path
+                                                        d="M17.984 11.456c-0.704 0.704-0.704 1.856 0 2.56 2.112 2.112 2.112 5.568 0 7.68l-5.12 5.12c-2.048 2.048-5.632 2.048-7.68 0-1.024-1.024-1.6-2.4-1.6-3.84s0.576-2.816 1.6-3.84c0.704-0.704 0.704-1.856 0-2.56s-1.856-0.704-2.56 0c-1.696 1.696-2.624 3.968-2.624 6.368 0 2.432 0.928 4.672 2.656 6.4 1.696 1.696 3.968 2.656 6.4 2.656s4.672-0.928 6.4-2.656l5.12-5.12c3.52-3.52 3.52-9.248 0-12.8-0.736-0.672-1.888-0.672-2.592 0.032z">
+                                                    </path>
+                                                    <path
+                                                        d="M29.344 2.656c-1.696-1.728-3.968-2.656-6.4-2.656s-4.672 0.928-6.4 2.656l-5.12 5.12c-3.52 3.52-3.52 9.248 0 12.8 0.352 0.352 0.8 0.544 1.28 0.544s0.928-0.192 1.28-0.544c0.704-0.704 0.704-1.856 0-2.56-2.112-2.112-2.112-5.568 0-7.68l5.12-5.12c2.048-2.048 5.632-2.048 7.68 0 1.024 1.024 1.6 2.4 1.6 3.84s-0.576 2.816-1.6 3.84c-0.704 0.704-0.704 1.856 0 2.56s1.856 0.704 2.56 0c1.696-1.696 2.656-3.968 2.656-6.4s-0.928-4.704-2.656-6.4z">
+                                                    </path>
+                                                </symbol>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <p>In my recent interview experiences, I attended multiple rounds and received
+                                        offers
+                                        from <span class="font-weight-bold">Google</span> and <span
+                                            class="font-weight-bold">Amazon</span> . Over the past few years, the online
+                                        community has helped me tremendously in preparation. With this post, I will
+                                        share
+                                        everything about my prep journey and contribute back my learnings. :)
+                                        SWE Interview Process.</p>
+                                    <p>In my recent interview experiences, I attended multiple rounds and received
+                                        offers
+                                        from Google and Amazon. Over the past few years, the online community has helped
+                                        me
+                                        tremendously in preparation. With this post, I will share everything about my
+                                        prep
+                                        journey and contribute back my learnings. :)
+                                        SWE Interview Process.</p>
+                                    <p> The process usually kickstarts with the shortlisting of a potential candidate by
+                                        a
+                                        company recruiter. Candidate then goes through initial screening round(s), which
+                                        determines if he/she is a good fit for the role. Once this is cleared, a typical
+                                        SWE
+                                        Interview will be conducted in below stages.</p>
+                                    <ul>
+                                        <li>Coding — 3 to 5 rounds</li>
+                                        <li>System Design — 1 round</li>
+                                        <li>Leadership Principles — 1 round</li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Preparation Strategy</h4>
+                                        <li>
+                                            1. Estimate Preparation Time
+                                            This is often ignored and not considered necessary. I suggest calibrating
+                                            your
+                                            current hold on problem-solving in DSA. I looked into my stronger and weaker
+                                            areas and did a rough estimate of preparation time. This estimation helped
+                                            me
+                                            prepare my mind for the long-term (or short-term) goal and kept the
+                                            motivation
+                                            up.
+                                            “Give yourself sufficient preparation time. Its always better to be
+                                            over-prepared than under-prepared.”
+                                            Total duration can vary depending on your expertise. At a broad level, I
+                                            have
+                                            categorized in below buckets.
+                                            • Beginner — Can comfortably code in at least one programming language.
+                                            Lacks
+                                            basic knowledge of DS and Algos. Struggles (or takes considerable time) to
+                                            solve
+                                            Easy difficulty problems.
+                                            • Intermediate — Good knowledge of DS and Algos. No problem with Easy
+                                            difficulty. Can solve most Medium problems. Struggles with Hard.
+                                            • Advanced — No problem with Medium difficulty. Able to solve most Hard
+                                            problems.
+                                            I put myself at Intermediate level before interviews.</li>
+                                        <h4>Preparation Time Estimate</h4>
+                                        <li>2. Coding and Learning Platforms
+                                            LeetCode, InterviewBit, and GFG were my leading go-to platforms for coding
+                                            practice. Before the interviews, I solved around 320 LeetCode, 80
+                                            InterviewBit,
+                                            and 30 GFG questions.</li>
+                                        <h4>Problem Difficulty Distribution</h4>
+                                        <li>Medium difficulty problems are essential as most of your interview questions
+                                            will fall under this category. Solving these will immensely improve your
+                                            speed
+                                            and problem-solving ability.
+                                            It’s important to start with a mix of Easy and Medium level question at an
+                                            early
+                                            stage. Begin with Hard problems once you gain an adequate level of
+                                            confidence.
+                                            Don’t get demotivated if you are unable to solve the Hard ones.
+                                            Medium difficulty problems are essential as most of your interview questions
+                                            will fall under this category. Solving these will immensely improve your
+                                            speed
+                                            and problem-solving ability.
+                                            It’s important to start with a mix of Easy and Medium level question at an
+                                            early
+                                            stage. Begin with Hard problems once you gain an adequate level of
+                                            confidence.
+                                            Don’t get demotivated if you are unable to solve the Hard ones. </li>
+                                        <h4>Using a Timer</h4>
+                                        <li>As the interview durations are getting shorter, it’s crucial to work on your
+                                            problem-solving pace. Generally, a coding interview is 45–50 mins long and a
+                                            candidate is expected to solve — 2 x Medium OR 1 x Hard OR 1 x Easy plus 1 x
+                                            Hard Follow-up.
+                                            Even if you could solve the initial question but consume a longer time, this
+                                            means you won’t have sufficient time to tackle the second one.</li>
+                                        <h4> Mock Interviews</h4>
+                                        <li>I gave a bunch of mock interviews before the actual ones. These can prove
+                                            quite
+                                            beneficial. Failing early in a test environment gives you useful insight. It
+                                            will help you to detect the gaps in your thought process. Try to rectify
+                                            each
+                                            mistake and get better with every mock interview.</li>
+                                        <h4>Prepare a roadmap</h4>
+                                        <li>Until now, we spoke a lot about different elements that can go into
+                                            preparation.
+                                            Now let us try to connect these pieces together and create a roadmap!
+                                            Consider below snapshot of my calendar, a month before interview.</li>
+                                    </ul>
+                                    <h3 class="mb-30">Block Quotes</h3>
+                                    <blockquote class="generic-blockquote">
+                                        “Recently, the US Federal government banned online casinos from operating in
+                                        America
+                                        by
+                                        making it illegal to
+                                        transfer money to them through any US bank or payment system. As a result of
+                                        this
+                                        law,
+                                        most
+                                        of the popular
+                                        online casino networks such as Party Gaming and PlayTech left the United States.
+                                        Overnight,
+                                        online casino
+                                        players found themselves being chased by the Federal government. But, after a
+                                        fortnight,
+                                        the
+                                        online casino
+                                        industry came up with a solution and new online casinos started taking root.
+                                        These
+                                        began
+                                        to
+                                        operate under a
+                                        different business umbrella, and by doing that, rendered the transfer of money
+                                        to
+                                        and
+                                        from
+                                        them legal. A major
+                                        part of this was enlisting electronic banking systems that would accept this new
+                                        clarification and start doing
+                                        business with me. Listed in this article are the electronic banking”
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="owl-carousel testimonial-carousel">
+                        <div class="position-relative bg-secondary p-4 d-none" id="amazon_testimonial">
+                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
+                                style="top: -6px; right: 0"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="img-fluid rounded-circle" src="assets/img/himanshi.jpeg"
+                                    style="width: 60px; height: 60px" alt="website template image" />
+                                <div class="ml-3">
+                                    <h6 class="font-weight-semi-bold m-0">Himanshi Yadav</h6>
+                                    <small>- Educator</small>
+                                </div>
+                            </div>
+                            <p class="m-0">
+                                “Amazing place to work with cooperative and supporting team members. Everyone here is
+                                ready to give a helping hand if required.”
+                            </p>
+                        </div>
+                        <div class="position-relative bg-secondary p-4 d-none" id="microsoft_testimonial">
+                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
+                                style="top: -6px; right: 0"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="img-fluid rounded-circle" src="assets/img/Heman.jpeg"
+                                    style="width: 60px; height: 60px" alt="website template image" />
+                                <div class="ml-3" style="color: azure;">
+                                    <h4 class="font-weight-semi-bold m-0">Aman Kumar</h4>
+                                    <small>SDE at Microsoft - Bangalore, Karnataka</small>
+                                </div>
+                            </div>
+                            <p class="m-0" style="color: azure;">
+                                “I learned stuff about software engineering and process and got better at code reviews.
+                                They have a lot of cool internal tools that help you do your job faster. I also learned
+                                more about testing, the importance of unit testing, the importance of not moving your
+                                code up to the next branch if a unit test fails and dealing with hundreds of people
+                                working on the same branch. The main languages used at microsoft is C, C++, C# and
+                                C++/CX (don’t ask). You’ll probably run into HTML 5, javascript and CSS depending on
+                                your team. So like I said, cool tools and some good processes in place to help you
+                                become a better software engineer. The downside is that they limit themselves on
+                                technology they use (this could be changing since Satya is our CEO). What I mean by this
+                                is I’ve never really heard people talk about Unix, perl, python, Java or other
+                                languages. It’s like they don’t exist. I find this to be limiting.”
+                            </p>
+                        </div>
+                        <div class="position-relative bg-secondary p-4 d-none" id="google_testimonial">
+                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
+                                style="top: -6px; right: 0"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="img-fluid rounded-circle" src="assets/img/mohan.jpeg"
+                                    style="width: 60px; height: 60px" alt="website template image" />
+                                <div class="ml-3">
+                                    <h6 class="font-weight-semi-bold m-0">Mohan Kumar</h6>
+                                    <small>- Educator</small>
+                                </div>
+                            </div>
+                            <p class="m-0">
+                                “Happy to be a part of the Muenot family. It provides quality education and mindful
+                                learning which helps in the inclusive growth of the learners and educators.”
+                            </p>
+                        </div>
+                    </div> -->
+                    </div>
+                </section>
+            </div>
+            <div class="d-none container-fluid" id="past_records">
+                <div class="row">
+                    <select id="year_r" class="form-control form-select col-lg-4 mx-1 my-1">
+                        <!-- <option>Default select</option> -->
+                        <option value="1">2020</option>
+                        <option value="2">2021</option>
+                        <option value="3">2022</option>
+                    </select>
+                    <select id="company_r" class="form-control form-select col-lg-4 mx-1 my-1">
+                        <!-- <option>Default select</option> -->
+                        <option value="1">Amazon</option>
+                        <option value="2">Microsoft</option>
+                        <option value="3">Google</option>
+                    </select>
+                    <button type="submit" onclick="showRecords()" class="btn btn-primary col">Submit</button>
+                </div>
+                <div id="amazon_2020" class="d-none">
+                    <div class="sample-text-area">
+                        <div class="container box_1170">
+                            <h3 class="text-heading">Text Sample</h3>
+                            <p class="sample-text">
+                                Every avid independent filmmaker has <b>Bold</b> about making that <i>Italic</i>
+                                interest
+                                documentary,
+                                or short
+                                film to show off their creative prowess. Many have great ideas and want to “wow”
+                                the<sup>Superscript</sup> scene,
+                                or video renters with their big project. But once you have the<sub>Subscript</sub> “in
+                                the
+                                can” (no
+                                easy
+                                feat), how
+                                do you move from a <del>Strike</del> through of master DVDs with the <u>“Underline”</u>
+                                marked
+                                hand-written title
+                                inside a secondhand CD case, to a pile of cardboard boxes full of shiny new,
+                                retail-ready
+                                DVDs, with
+                                UPC
+                                barcodes
+                                and polywrap sitting on your doorstep? You need to create eye-popping artwork and have
+                                your
+                                project
+                                replicated.
+                                Using a reputable full service DVD Replication company like PacificDisc, Inc. to partner
+                                with is
+                                certainly a
+                                helpful option to ensure a professional end result, but to help with your DVD
+                                replication
+                                project,
+                                here
+                                are 4 easy
+                                steps to follow for good DVD replication results:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section-top-border">
+                        <h3 class="mb-30">Block Quotes</h3>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <blockquote class="generic-blockquote">
+                                    “Recently, the US Federal government banned online casinos from operating in America
+                                    by
+                                    making it illegal to
+                                    transfer money to them through any US bank or payment system. As a result of this
+                                    law,
+                                    most
+                                    of the popular
+                                    online casino networks such as Party Gaming and PlayTech left the United States.
+                                    Overnight,
+                                    online casino
+                                    players found themselves being chased by the Federal government. But, after a
+                                    fortnight,
+                                    the
+                                    online casino
+                                    industry came up with a solution and new online casinos started taking root. These
+                                    began
+                                    to
+                                    operate under a
+                                    different business umbrella, and by doing that, rendered the transfer of money to
+                                    and
+                                    from
+                                    them legal. A major
+                                    part of this was enlisting electronic banking systems that would accept this new
+                                    clarification and start doing
+                                    business with me. Listed in this article are the electronic banking”
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="microsoft_2020" class="d-none">microsoft_2020</div>
+
+                <div id="google_2020" class="d-none">google_2020</div>
+
+                <div id="amazon_2021" class="d-none">amazon_2021</div>
+
+                <div id="microsoft_2021" class="d-none">microsoft_2021</div>
+
+                <div id="google_2021" class="d-none">google_2021</div>
+
+                <div id="amazon_2022" class="d-none">amazon_2022</div>
+
+                <div id="microsoft_2022" class="d-none">microsoft_2022</div>
+
+                <div id="google_2022" class="d-none">google_2022</div>
+            </div>
         </div>
+
+
+
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
@@ -284,6 +1493,170 @@
         integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
         data-cf-beacon='{"rayId":"79784669cf9489e2","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}'
         crossorigin="anonymous"></script>
+
+
+    <script>
+        function displayprofile() {
+            // document.getElementById("profile").classList.remove('d-none');
+            document.getElementById("content").classList.remove('d-none');
+            document.getElementById("mentor").classList.add('d-none');
+            document.getElementById("past_records").classList.add('d-none');
+        }
+        function displayMentor() {
+            // document.getElementById("profile").classList.add('d-none');
+            document.getElementById("content").classList.add('d-none');
+            document.getElementById("mentor").classList.remove('d-none');
+            document.getElementById("past_records").classList.add('d-none');
+        }
+        function displayRecords() {
+            // document.getElementById("profile").classList.add('d-none');
+            document.getElementById("content").classList.add('d-none');
+            document.getElementById("mentor").classList.add('d-none');
+            document.getElementById("past_records").classList.remove('d-none');
+        }
+
+        // ..................
+
+
+
+
+        document.getElementById("company").addEventListener('change', (e) => {
+            var val = document.getElementById("company").value;
+            if (val == 1) {
+                document.getElementById("amazon_testimonial").classList.remove('d-none');
+                document.getElementById("microsoft_testimonial").classList.add('d-none');
+                document.getElementById("google_testimonial").classList.add('d-none');
+            }
+            if (val == 2) {
+                document.getElementById("microsoft_testimonial").classList.remove('d-none');
+                document.getElementById("amazon_testimonial").classList.add('d-none');
+                document.getElementById("google_testimonial").classList.add('d-none');
+            }
+            if (val == 3) {
+                document.getElementById("google_testimonial").classList.remove('d-none');
+                document.getElementById("microsoft_testimonial").classList.add('d-none');
+                document.getElementById("amazon_testimonial").classList.add('d-none');
+            }
+        });
+
+
+
+        // ..................
+
+
+        function showRecords() {
+            var year_val = document.getElementById("year_r").value;
+            var com_val = document.getElementById("company_r").value;
+            if (year_val == 1 && com_val == 1) {
+                // alert("Amazon 2020");
+                document.getElementById("amazon_2020").classList.remove('d-none');
+                document.getElementById("microsoft_2020").classList.add('d-none');
+                document.getElementById("google_2020").classList.add('d-none');
+                document.getElementById("amazon_2021").classList.add('d-none');
+                document.getElementById("microsoft_2021").classList.add('d-none');
+                document.getElementById("google_2021").classList.add('d-none');
+                document.getElementById("amazon_2022").classList.add('d-none');
+                document.getElementById("microsoft_2022").classList.add('d-none');
+                document.getElementById("google_2022").classList.add('d-none');
+            }
+            if (year_val == 1 && com_val == 2) {
+                // alert("Microsoft 2020");
+                document.getElementById("amazon_2020").classList.add('d-none');
+                document.getElementById("microsoft_2020").classList.remove('d-none');
+                document.getElementById("google_2020").classList.add('d-none');
+                document.getElementById("amazon_2021").classList.add('d-none');
+                document.getElementById("microsoft_2021").classList.add('d-none');
+                document.getElementById("google_2021").classList.add('d-none');
+                document.getElementById("amazon_2022").classList.add('d-none');
+                document.getElementById("microsoft_2022").classList.add('d-none');
+                document.getElementById("google_2022").classList.add('d-none');
+            }
+            if (year_val == 1 && com_val == 3) {
+                // alert("Google 2020");
+                document.getElementById("amazon_2020").classList.add('d-none');
+                document.getElementById("microsoft_2020").classList.add('d-none');
+                document.getElementById("google_2020").classList.remove('d-none');
+                document.getElementById("amazon_2021").classList.add('d-none');
+                document.getElementById("microsoft_2021").classList.add('d-none');
+                document.getElementById("google_2021").classList.add('d-none');
+                document.getElementById("amazon_2022").classList.add('d-none');
+                document.getElementById("microsoft_2022").classList.add('d-none');
+                document.getElementById("google_2022").classList.add('d-none');
+            }
+            if (year_val == 2 && com_val == 1) {
+                // alert("Amazon 2021");
+                document.getElementById("amazon_2020").classList.add('d-none');
+                document.getElementById("microsoft_2020").classList.add('d-none');
+                document.getElementById("google_2020").classList.add('d-none');
+                document.getElementById("amazon_2021").classList.remove('d-none');
+                document.getElementById("microsoft_2021").classList.add('d-none');
+                document.getElementById("google_2021").classList.add('d-none');
+                document.getElementById("amazon_2022").classList.add('d-none');
+                document.getElementById("microsoft_2022").classList.add('d-none');
+                document.getElementById("google_2022").classList.add('d-none');
+            }
+            if (year_val == 2 && com_val == 2) {
+                // alert("Microsoft 2021");
+                document.getElementById("amazon_2020").classList.add('d-none');
+                document.getElementById("microsoft_2020").classList.add('d-none');
+                document.getElementById("google_2020").classList.add('d-none');
+                document.getElementById("amazon_2021").classList.add('d-none');
+                document.getElementById("microsoft_2021").classList.remove('d-none');
+                document.getElementById("google_2021").classList.add('d-none');
+                document.getElementById("amazon_2022").classList.add('d-none');
+                document.getElementById("microsoft_2022").classList.add('d-none');
+                document.getElementById("google_2022").classList.add('d-none');
+            }
+            if (year_val == 2 && com_val == 3) {
+                // alert("Google 2021");
+                document.getElementById("amazon_2020").classList.add('d-none');
+                document.getElementById("microsoft_2020").classList.add('d-none');
+                document.getElementById("google_2020").classList.add('d-none');
+                document.getElementById("amazon_2021").classList.add('d-none');
+                document.getElementById("microsoft_2021").classList.add('d-none');
+                document.getElementById("google_2021").classList.remove('d-none');
+                document.getElementById("amazon_2022").classList.add('d-none');
+                document.getElementById("microsoft_2022").classList.add('d-none');
+                document.getElementById("google_2022").classList.add('d-none');
+            }
+            if (year_val == 3 && com_val == 1) {
+                // alert("Amazon 2022");
+                document.getElementById("amazon_2020").classList.add('d-none');
+                document.getElementById("microsoft_2020").classList.add('d-none');
+                document.getElementById("google_2020").classList.add('d-none');
+                document.getElementById("amazon_2021").classList.add('d-none');
+                document.getElementById("microsoft_2021").classList.add('d-none');
+                document.getElementById("google_2021").classList.add('d-none');
+                document.getElementById("amazon_2022").classList.remove('d-none');
+                document.getElementById("microsoft_2022").classList.add('d-none');
+                document.getElementById("google_2022").classList.add('d-none');
+            }
+            if (year_val == 3 && com_val == 2) {
+                // alert("Microsoft 2022");
+                document.getElementById("amazon_2020").classList.add('d-none');
+                document.getElementById("microsoft_2020").classList.add('d-none');
+                document.getElementById("google_2020").classList.add('d-none');
+                document.getElementById("amazon_2021").classList.add('d-none');
+                document.getElementById("microsoft_2021").classList.add('d-none');
+                document.getElementById("google_2021").classList.add('d-none');
+                document.getElementById("amazon_2022").classList.add('d-none');
+                document.getElementById("microsoft_2022").classList.remove('d-none');
+                document.getElementById("google_2022").classList.add('d-none');
+            }
+            if (year_val == 3 && com_val == 3) {
+                // alert("Google 2022");
+                document.getElementById("amazon_2020").classList.add('d-none');
+                document.getElementById("microsoft_2020").classList.add('d-none');
+                document.getElementById("google_2020").classList.add('d-none');
+                document.getElementById("amazon_2021").classList.add('d-none');
+                document.getElementById("microsoft_2021").classList.add('d-none');
+                document.getElementById("google_2021").classList.add('d-none');
+                document.getElementById("amazon_2022").classList.add('d-none');
+                document.getElementById("microsoft_2022").classList.add('d-none');
+                document.getElementById("google_2022").classList.remove('d-none');
+            }
+        }
+    </script>
 </body>
 
 </html>

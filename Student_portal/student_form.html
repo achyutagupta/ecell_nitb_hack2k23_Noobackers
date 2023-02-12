@@ -16,16 +16,15 @@
         div,
         form,
         input,
-        select,
-        p {
+        select{
             padding: 0;
             margin: 0;
             outline: none;
             font-family: Roboto, Arial, sans-serif;
             font-size: 16px;
-            color: #eee;
+            color: #494ca2;
         }
-
+        
         body {
             background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
             background-size: cover;
@@ -48,15 +47,16 @@
             align-items: center;
             height: 100%;
             padding: 25px;
-            background: rgba(0, 0, 0, 0.5);
+            background: #494ca2;
         }
-
+        
         .left-part,
         form {
             padding: 25px;
         }
-
+        
         .left-part {
+            color: #eee;
             text-align: center;
         }
 
@@ -65,7 +65,8 @@
         }
 
         form {
-            background: rgba(0, 0, 0, 0.7);
+            background:#fff;
+            border-radius: 20px;
         }
 
         .title {
@@ -82,14 +83,14 @@
         input,
         select {
             padding: 5px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             background: transparent;
             border: none;
-            border-bottom: 1px solid #eee;
+            border-bottom: 0.8px solid #494ca2;
         }
 
         input::placeholder {
-            color: #eee;
+            color: #494ca2;
         }
 
         option:focus {
@@ -97,7 +98,7 @@
         }
 
         option {
-            background: black;
+            background: #fff;
             border: none;
         }
 
@@ -107,7 +108,7 @@
         }
 
         .checkbox a {
-            color: #26a9e0;
+            color: #494ca2;
         }
 
         .checkbox a:hover {
@@ -120,11 +121,11 @@
             margin-top: 20px;
             border-radius: 5px;
             border: none;
-            background: #26a9e0;
+            background: #494ca2;
             text-decoration: none;
             font-size: 15px;
             font-weight: 400;
-            color: #fff;
+            color: #eee;
         }
 
         .btn-item {
@@ -138,7 +139,8 @@
 
         button:hover,
         .btn-item:hover {
-            background: #85d6de;
+            /* background: #85d6de; */
+            color: #fff;
         }
 
         @media (min-width: 568px) {
@@ -168,10 +170,10 @@
             <i class="fas fa-graduation-cap"></i>
             <h1>Student Portal</h1>
             <p> A portal to help achieve the maximum of their potential.</p>
-            <div class="btn-group">
+            <!-- <div class="btn-group">
                 <a class="btn-item" href="https://www.w3docs.com/learn-html.html">Learn HTML</a>
                 <a class="btn-item" href="https://www.w3docs.com/quiz/#">Select Quiz</a>
-            </div>
+            </div> -->
         </div>
         <form>
             <div class="title">

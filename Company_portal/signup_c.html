@@ -7,54 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
-
-<body>
-    <a href="login_c.html">Login pAge</a>
-
-
-            <div class="row">
-                
-                <div class="col-sm-6"> <img src="photo-1570126618953-d437176e8c79.avif" width="650px" height="100%" ></div>
-                <div class="col-sm-6">
-                    <h4 class="mb-3">Create Your Account</h4>
-                    <div class="form-group">
-                        <label for="full_name">Full Name</label>
-                        <input type="text" name="full_name" id="full_name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="user_name">User Name</label>
-                        <input type="text" name="user_name" id="user_name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="email_address">Email Address</label>
-                        <input type="email" name="email_address" id="register_email_address" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="password1">Password</label>
-                        <input type="password" name="password1" id="register_password" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="password2">Confirm Password</label>
-                        <input type="password" name="password2" id="password2" class="form-control">
-                    </div>
-                    <div id="pass-info" class="clearfix"></div>
-                    <div class="mb-4">
-                        <label class="container_check">I agree to the <a href="#" data-bs-toggle="modal"
-                                data-bs-target="#terms-txt">Terms and Privacy Policy</a>.
-                            <input type="checkbox" name="agree" id="agree">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <button id="signup_btn" class="btn_1 full-width">Submit</button>
-                    <p class="text-center mt-3 mb-0">Already have an account? <a href="login.html">Sign In</a></p>
+<body style="overflow: hidden !important;">
+    <!-- <a href="login_c.html">Login pAge</a> -->
+    <section style="background-image: url(employee.jpg); background-size: cover; min-height: 100vh;">
+        <div class="w-50 d-flex align-items-center py-lg-3" style="min-height: 100vh; position: relative; left: 55%;">
+            <!-- <div class="col-sm-6"> <img src="employee.jpg"></div> -->
+            <div class="container-fluid col-lg-10 shadow mx-3 my-2 px-3 py-3" style="background-color: #D1D2D4; border-radius: 20px;">
+                <h4 class="mb-3 text-xxl-center font-weight-bolder">Create Your Account</h4>
+                <div class="form-group">
+                    <label for="full_name">Full Name</label>
+                    <input type="text" name="full_name" id="full_name" class="form-control">
                 </div>
+                <div class="form-group">
+                    <label for="user_name">User Name</label>
+                    <input type="text" name="user_name" id="user_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email_address">Email Address</label>
+                    <input type="email" name="email_address" id="register_email_address" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password1">Password</label>
+                    <input type="password" name="password1" id="register_password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" name="password2" id="password2" class="form-control">
+                </div>
+                <div id="pass-info" class="clearfix"></div>
+                <div class="mb-4 text-center">
+                    <label class="container_check">I agree to the <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#terms-txt">Terms and Privacy Policy</a>.
+                        <input type="checkbox" name="agree" id="agree">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <button id="signup_btn" class="btn- w-100 text-xxl-center font-weight-bolder">Submit</button>
+                <p class="text-center mt-3 mb-0">Already have an account? <a href="login_c.html">Sign In</a></p>
             </div>
-   
-   
+        </div>
+    </section>
+
+
 </body>
-https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js
+<!-- https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js -->
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
@@ -76,24 +75,24 @@ https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
 
-    document.getElementById("signup_btn").addEventListener('click',(e)=>{
+    document.getElementById("signup_btn").addEventListener('click', (e) => {
 
 
         const register_email = document.getElementById("register_email_address").value;
         const register_password = document.getElementById("register_password").value;
 
         createUserWithEmailAndPassword(auth, register_email, register_password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            alert("User Signed In")
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-            alert(errorMessage);
-        });
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                alert("User Signed In")
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                alert(errorMessage);
+            });
     })
 
 
